@@ -31,38 +31,41 @@ court_strategy/
 │   └── faq.mdx
 ├── public/                    # Static assets
 │   └── images/
+├── .github/workflows/
+│   └── deploy.yml            # GitHub Actions deployment
 ├── mint.json                  # Mintlify configuration
-└── package.json              # Dependencies
+├── vercel.json                # Vercel deployment config
+├── .gitignore
+└── README.md
 ```
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ installed
-- npm or yarn package manager
+- Node.js 18+ installed (for Mintlify CLI)
 
 ### Local Development
 
-1. **Install Mintlify CLI:**
+1. **Install Mintlify CLI globally:**
    ```bash
    npm install -g mintlify
    ```
 
-2. **Install dependencies:**
+2. **Run development server:**
    ```bash
-   npm install
-   ```
-
-3. **Run development server:**
-   ```bash
+   cd /Users/nathan.baker/code/court_strategy
    mintlify dev
    ```
 
-4. **Open in browser:**
-   Navigate to `http://localhost:3000`
+   This will open `http://localhost:3000` in your browser automatically.
 
-The dev server will auto-reload when you edit MDX files.
+3. **Make changes:**
+   - Edit any `.mdx` file
+   - Site auto-reloads with your changes
+   - No build step needed during development
+
+**Note:** Mintlify manages all dependencies internally. You don't need `npm install` or `package.json`.
 
 ## Deployment
 
@@ -70,16 +73,27 @@ This site is configured to deploy to Vercel automatically via GitHub Actions.
 
 ### Initial Setup
 
+**Option A: Direct Vercel Integration (Recommended - Easiest)**
+
+1. Go to [vercel.com](https://vercel.com) and sign in with GitHub
+2. Click "Add New Project"
+3. Import your `court_strategy` repository
+4. Vercel will auto-detect it as a Mintlify project
+5. Click "Deploy"
+6. Done! Your site is live and will auto-deploy on every push to main
+
+**Option B: GitHub Actions Deployment (More Control)**
+
 1. **Create Vercel Project:**
    - Go to [vercel.com](https://vercel.com)
    - Import this repository
-   - Framework Preset: Other
-   - Build Command: `mintlify build`
-   - Output Directory: `_build`
+   - Let Vercel auto-detect settings
+   - Deploy once manually
 
 2. **Get Vercel Credentials:**
    - Install Vercel CLI: `npm i -g vercel`
    - Run `vercel` in project directory
+   - Link to your Vercel project
    - Copy the `.vercel/project.json` values:
      - `orgId` → `VERCEL_ORG_ID`
      - `projectId` → `VERCEL_PROJECT_ID`
@@ -95,23 +109,24 @@ This site is configured to deploy to Vercel automatically via GitHub Actions.
 4. **Push to main branch:**
    ```bash
    git add .
-   git commit -m "Initial commit"
+   git commit -m "Setup deployment"
    git push origin main
    ```
 
-GitHub Actions will automatically build and deploy your site!
+GitHub Actions will automatically deploy your site!
+
+**Recommended:** Use Option A for simplicity. Vercel's auto-deployment is reliable and requires no additional setup.
 
 ### Manual Deployment (Alternative)
 
 If you prefer manual deployment:
 
 ```bash
-# Build the site
-mintlify build
-
 # Deploy to Vercel
 vercel --prod
 ```
+
+Vercel will handle the build automatically.
 
 ## Content Workflow
 

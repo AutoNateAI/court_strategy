@@ -2,12 +2,11 @@
 node_modules/
 package-lock.json
 yarn.lock
+.pnpm-store/
 
-# Mintlify build output
+# Mintlify
 .mintlify/
-_build/
-.next/
-out/
+client/
 
 # Obsidian notes (keep private)
 notes/

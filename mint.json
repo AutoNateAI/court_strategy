@@ -49,12 +49,6 @@
   ],
   "navigation": [
     {
-      "group": "Home",
-      "pages": [
-        "home"
-      ]
-    },
-    {
       "group": "Workshops",
       "pages": [
         "workshops/overview",

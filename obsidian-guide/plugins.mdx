@@ -1,0 +1,366 @@
+---
+title: Essential Plugins
+description: Supercharge Obsidian with powerful community plugins
+---
+
+## Understanding Plugins
+
+Obsidian's true power comes from its extensive plugin ecosystem. There are two types:
+
+<CardGroup cols={2}>
+  <Card title="Core Plugins" icon="plug">
+    Built into Obsidian, maintained by the Obsidian team
+  </Card>
+  <Card title="Community Plugins" icon="users">
+    Created by the community, thousands available
+  </Card>
+</CardGroup>
+
+## Enabling Community Plugins
+
+<Steps>
+  <Step title="Open Settings">
+    Click the gear icon ⚙️ in the bottom left
+  </Step>
+  <Step title="Go to Community Plugins">
+    Navigate to "Community plugins" section
+  </Step>
+  <Step title="Turn Off Restricted Mode">
+    Click "Turn on community plugins"
+    
+    <Warning>
+      Community plugins can access your vault. Only install from trusted sources.
+    </Warning>
+  </Step>
+  <Step title="Browse Plugins">
+    Click "Browse" to see all available plugins
+  </Step>
+</Steps>
+
+## Essential Core Plugins
+
+Enable these built-in plugins first:
+
+### Daily Notes
+**Why:** Perfect for journaling and daily planning
+
+<Accordion title="How to set up Daily Notes">
+  1. Go to Settings → Core Plugins
+  2. Enable "Daily notes"
+  3. Click the gear icon next to it
+  4. Configure:
+     - Date format: `YYYY-MM-DD`
+     - New file location: `Daily Notes/`
+     - Template: Choose from Templates folder
+  
+  **Usage:** Click calendar icon or use `Cmd/Ctrl + Shift + D`
+</Accordion>
+
+### Templates
+**Why:** Create consistent note structures
+
+<Accordion title="How to set up Templates">
+  1. Enable "Templates" core plugin
+  2. Create a "Templates" folder in your vault
+  3. Create template notes (e.g., "Meeting Template.md")
+  4. In settings, set template folder location
+  
+  **Usage:** `Cmd/Ctrl + T` to insert template
+</Accordion>
+
+### Backlinks
+**Why:** See which notes link to your current note
+
+<Accordion title="Enable Backlinks">
+  1. Enable "Backlinks" in core plugins
+  2. View in right sidebar
+  3. Discover connections you didn't know existed!
+</Accordion>
+
+### Graph View
+**Why:** Visualize your knowledge network
+
+<Accordion title="Configure Graph View">
+  1. Enable "Graph view"
+  2. Click the graph icon to view
+  3. Use filters to focus on specific notes
+  4. Watch your knowledge network grow!
+</Accordion>
+
+## Must-Have Community Plugins
+
+### 1. Dataview 📊
+**Create dynamic lists and tables from your notes**
+
+<Accordion title="What is Dataview?">
+  Dataview lets you query your notes like a database.
+  
+  **Example use cases:**
+  - List all tasks across your vault
+  - Show upcoming deadlines
+  - Track project status
+  - Generate reports
+  
+  **Install:** Settings → Community plugins → Browse → Search "Dataview"
+</Accordion>
+
+**Example query:**
+```dataview
+TABLE status, deadline
+FROM "Projects"
+WHERE status = "in-progress"
+SORT deadline ASC
+```
+
+### 2. Calendar 📅
+**Visual calendar interface for daily notes**
+
+<Accordion title="Why Calendar is essential">
+  - See your daily notes on a calendar
+  - Quickly navigate between dates
+  - Spot patterns in your journaling
+  - Perfect for families tracking events
+  
+  **Install:** Search "Calendar" in community plugins
+  **Usage:** Shows in right sidebar
+</Accordion>
+
+### 3. Templater ⚙️
+**Advanced template functionality**
+
+<Accordion title="Templater vs Templates">
+  While the core Templates plugin is good, Templater adds:
+  - Dynamic dates and times
+  - User input prompts
+  - JavaScript execution
+  - File operations
+  
+  **Install:** Search "Templater" in community plugins
+  
+  **Example template:**
+  ```
+  # Meeting with <% tp.file.title %>
+  Date: <% tp.date.now("YYYY-MM-DD") %>
+  Attendees: <% tp.system.prompt("Who attended?") %>
+  ```
+</Accordion>
+
+### 4. Kanban 📋
+**Visual task management boards**
+
+<Accordion title="Kanban for project management">
+  Create Trello-style boards right in Obsidian.
+  
+  **Great for:**
+  - Project management
+  - Tracking legal case tasks
+  - Family to-do lists
+  - Research workflow stages
+  
+  **Install:** Search "Kanban" in community plugins
+  **Usage:** Create note with `.kanban` extension
+</Accordion>
+
+### 5. Excalidraw ✏️
+**Draw diagrams and illustrations**
+
+<Accordion title="Visual thinking with Excalidraw">
+  Draw diagrams, sketch ideas, annotate images.
+  
+  **Use cases:**
+  - Family trees
+  - Timeline diagrams
+  - Process flows
+  - Mind maps
+  
+  **Install:** Search "Excalidraw" in community plugins
+</Accordion>
+
+## Plugins for Specific Use Cases
+
+<Tabs>
+  <Tab title="For Families">
+    ### Family-Focused Plugins
+    
+    **Family Tree** - Visualize family relationships
+    
+    **Tracker** - Track health metrics, milestones, habits
+    
+    **Buttons** - Create clickable buttons for common actions
+    
+    **Reminder** - Set reminders for important dates
+  </Tab>
+  
+  <Tab title="For Research">
+    ### Research Plugins
+    
+    **Citations** - Manage bibliography and citations
+    
+    **PDF++** - Better PDF annotation
+    
+    **Extract Highlights** - Import Kindle/readwise highlights
+    
+    **Note Refactor** - Split long notes easily
+  </Tab>
+  
+  <Tab title="For Community">
+    ### Community Organizing Plugins
+    
+    **Tasks** - Advanced task management
+    
+    **Initiative Tracker** - Track campaign progress
+    
+    **Charview** - Create charts from your data
+    
+    **Projects** - Manage complex projects
+  </Tab>
+</Tabs>
+
+## Recommended Plugin Combinations
+
+### The Starter Pack 🌟
+Essential for everyone:
+- Daily Notes (core)
+- Templates (core)
+- Dataview
+- Calendar
+- Kanban
+
+### The Family Pack 👨‍👩‍👧‍👦
+For family organization:
+- All starter pack plugins
+- Tracker
+- Reminder
+- Buttons
+- Excalidraw
+
+### The Researcher Pack 📚
+For academic/legal research:
+- All starter pack plugins
+- Citations
+- PDF++
+- Note Refactor
+- Extract Highlights
+
+### The Power User Pack ⚡
+For advanced users:
+- All starter pack plugins
+- Templater
+- Dataview
+- QuickAdd
+- Obsidian Git
+
+## Installing Plugins
+
+<Steps>
+  <Step title="Find Plugin">
+    Settings → Community plugins → Browse
+    
+    Search for the plugin name
+  </Step>
+  <Step title="Install">
+    Click "Install" button
+  </Step>
+  <Step title="Enable">
+    After installing, click "Enable"
+  </Step>
+  <Step title="Configure">
+    Click the gear icon next to the plugin to configure settings
+  </Step>
+</Steps>
+
+## Plugin Safety
+
+<Warning>
+  **Security considerations:**
+  - Plugins can access all your vault files
+  - Only install plugins with good reviews
+  - Check last update date (avoid abandoned plugins)
+  - Read permissions carefully
+</Warning>
+
+<Tip>
+  Start with popular, well-maintained plugins. The community vets them thoroughly.
+</Tip>
+
+## Managing Plugins
+
+### Disabling Plugins
+
+If Obsidian becomes slow:
+1. Settings → Community plugins
+2. Disable plugins you're not using
+3. Test performance
+
+### Updating Plugins
+
+<Steps>
+  <Step title="Check for Updates">
+    Settings → Community plugins → Check for updates
+  </Step>
+  <Step title="Update All">
+    Click "Update all" or update individually
+  </Step>
+  <Step title="Review Changes">
+    Check release notes for breaking changes
+  </Step>
+</Steps>
+
+## Plugin Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Plugin won't enable">
+    **Solution:** 
+    - Check if community plugins are enabled
+    - Try uninstalling and reinstalling
+    - Check plugin's GitHub for known issues
+  </Accordion>
+  <Accordion title="Obsidian is slow">
+    **Solution:**
+    - Disable plugins one by one to find the culprit
+    - Common culprits: Dataview on large vaults, heavy themes
+    - Update all plugins to latest versions
+  </Accordion>
+  <Accordion title="Plugin conflicts">
+    **Solution:**
+    - Some plugins don't work well together
+    - Check plugin documentation
+    - Try disabling one of the conflicting plugins
+  </Accordion>
+</AccordionGroup>
+
+## Advanced: Creating Your Own Plugin
+
+Interested in creating plugins? Check out:
+- [Obsidian Plugin Developer Docs](https://docs.obsidian.md/Plugins/Getting+started/Build+a+plugin)
+- Our [Cursor Guide](/cursor-guide/introduction) for using AI to help code
+
+## Next Steps
+
+<Steps>
+  <Step title="Experiment">
+    Install the starter pack and try each plugin
+  </Step>
+  <Step title="Learn Civic Research">
+    Apply these tools to real-world research
+    
+    [Go to Civic Research Guide →](/obsidian-guide/civic-research)
+  </Step>
+  <Step title="Integrate with Cursor">
+    Use AI to enhance your Obsidian workflow
+    
+    [Go to Cursor Guide →](/cursor-guide/introduction)
+  </Step>
+</Steps>
+
+## Plugin Quick Reference
+
+| Plugin | Purpose | Difficulty | Essential |
+|--------|---------|------------|-----------|
+| Dataview | Query notes | Medium | ⭐⭐⭐ |
+| Calendar | Date navigation | Easy | ⭐⭐⭐ |
+| Templater | Advanced templates | Medium | ⭐⭐ |
+| Kanban | Task boards | Easy | ⭐⭐ |
+| Excalidraw | Drawing | Easy | ⭐⭐ |
+| Citations | Bibliography | Medium | ⭐ (for researchers) |
+

@@ -1,0 +1,16 @@
+# Placeholder for logo images
+
+Place your logo files here:
+- `logo-light.svg` - Logo for light mode
+- `logo-dark.svg` - Logo for dark mode  
+- `favicon.png` - Browser favicon
+
+You can also add other images referenced in your MDX files:
+- `hero-light.png` - Home page hero image (light mode)
+- `hero-dark.png` - Home page hero image (dark mode)
+- `obsidian-graph.png` - Example Obsidian graph view
+- `cursor-interface.png` - Cursor interface screenshot
+- `canvas-example.png` - Example canvas
+
+For now, these images are referenced but not required for the site to build.
+

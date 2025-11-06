@@ -1,0 +1,391 @@
+---
+title: Installing Cursor
+description: Get Cursor AI set up on your computer
+---
+
+## Download Cursor
+
+Cursor is available for Windows, macOS, and Linux. It's based on VS Code, so if you've used that, it'll feel familiar.
+
+<CardGroup cols={3}>
+  <Card title="Windows" icon="windows" href="https://cursor.sh">
+    Download for Windows
+  </Card>
+  <Card title="macOS" icon="apple" href="https://cursor.sh">
+    Download for macOS
+  </Card>
+  <Card title="Linux" icon="linux" href="https://cursor.sh">
+    Download for Linux
+  </Card>
+</CardGroup>
+
+## Installation Steps
+
+<Tabs>
+  <Tab title="macOS">
+    ### macOS Installation
+    
+    <Steps>
+      <Step title="Download">
+        Go to [cursor.sh](https://cursor.sh) and download the `.dmg` file
+      </Step>
+      <Step title="Open DMG">
+        Double-click the downloaded file
+      </Step>
+      <Step title="Drag to Applications">
+        Drag Cursor to your Applications folder
+      </Step>
+      <Step title="Launch">
+        Open Cursor from Applications or Spotlight
+      </Step>
+      <Step title="Security">
+        If macOS blocks it, go to System Preferences > Security & Privacy and click "Open Anyway"
+      </Step>
+    </Steps>
+    
+    <Tip>
+      **Tip:** Add Cursor to your Dock for easy access
+    </Tip>
+  </Tab>
+  
+  <Tab title="Windows">
+    ### Windows Installation
+    
+    <Steps>
+      <Step title="Download">
+        Download the Windows installer from [cursor.sh](https://cursor.sh)
+      </Step>
+      <Step title="Run Installer">
+        Double-click the `.exe` file
+      </Step>
+      <Step title="Follow Wizard">
+        Accept the license and follow prompts
+      </Step>
+      <Step title="Launch">
+        Cursor will launch automatically after installation
+      </Step>
+    </Steps>
+    
+    <Info>
+      Cursor installs like any Windows application. No special setup needed.
+    </Info>
+  </Tab>
+  
+  <Tab title="Linux">
+    ### Linux Installation
+    
+    <Steps>
+      <Step title="Download Package">
+        Download `.AppImage`, `.deb`, or `.rpm` from [cursor.sh](https://cursor.sh)
+      </Step>
+      <Step title="AppImage (All Distros)">
+        ```bash
+        chmod +x cursor-*.AppImage
+        ./cursor-*.AppImage
+        ```
+      </Step>
+      <Step title="Debian/Ubuntu (.deb)">
+        ```bash
+        sudo dpkg -i cursor_*.deb
+        sudo apt-get install -f
+        ```
+      </Step>
+      <Step title="Fedora/RHEL (.rpm)">
+        ```bash
+        sudo rpm -i cursor-*.rpm
+        ```
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## First Launch Setup
+
+When you first open Cursor, you'll go through a quick setup:
+
+<Steps>
+  <Step title="Welcome Screen">
+    You'll see Cursor's welcome screen. Click "Get Started"
+  </Step>
+  <Step title="Choose Your AI Model">
+    Select your preferred AI model:
+    - **GPT-4** (recommended for best results)
+    - **GPT-3.5** (faster, good for simple tasks)
+    - **Claude** (excellent for analysis)
+    
+    <Tip>
+      Don't worry - you can change this later or switch per-request
+    </Tip>
+  </Step>
+  <Step title="Sign In or Try Free">
+    - **Sign up** for Cursor account (free tier available)
+    - Or **use your own API key** (OpenAI, Anthropic)
+    - Or **try without signing in** (limited features)
+  </Step>
+  <Step title="Optional: Import Settings">
+    If you've used VS Code before, you can import your settings
+    
+    Otherwise, skip this step
+  </Step>
+</Steps>
+
+## System Requirements
+
+<Tabs>
+  <Tab title="Minimum">
+    **Minimum Requirements:**
+    - **OS:** Windows 10+, macOS 10.15+, or modern Linux
+    - **RAM:** 4GB
+    - **Storage:** 500MB for app
+    - **Internet:** Required for AI features
+  </Tab>
+  <Tab title="Recommended">
+    **Recommended:**
+    - **RAM:** 8GB or more
+    - **Storage:** 1GB+ available
+    - **Display:** 1920x1080 or higher
+    - **Internet:** Fast connection for smoother AI responses
+  </Tab>
+</Tabs>
+
+## Configuring Cursor for Obsidian
+
+Let's optimize Cursor for working with your Obsidian vault:
+
+### Step 1: Basic Settings
+
+<Steps>
+  <Step title="Open Settings">
+    Click the gear icon ⚙️ or press `Cmd/Ctrl + ,`
+  </Step>
+  <Step title="Configure Editor">
+    - **Font Size:** 14-16 for comfortable reading
+    - **Word Wrap:** Enable (for long lines in notes)
+    - **Auto Save:** Set to "afterDelay"
+  </Step>
+  <Step title="File Association">
+    Tell Cursor to treat `.md` and `.mdx` files as markdown:
+    - Search for "file associations" in settings
+    - Add: `*.md` → `markdown`
+    - Add: `*.canvas` → `json`
+  </Step>
+</Steps>
+
+### Step 2: AI Settings
+
+<Steps>
+  <Step title="Open Cursor Settings">
+    Go to Cursor Settings (separate from VS Code settings)
+  </Step>
+  <Step title="Choose AI Model">
+    Under "Models":
+    - **Main model:** GPT-4 or Claude 3.5 Sonnet (best quality)
+    - **Fast model:** GPT-3.5 Turbo (for quick tasks)
+  </Step>
+  <Step title="Context Settings">
+    - **Include .gitignore files:** Off (to read all notes)
+    - **Max context:** 200K tokens (for large vaults)
+  </Step>
+</Steps>
+
+### Step 3: API Keys (Optional)
+
+If you want to use your own API keys instead of Cursor's credits:
+
+<Accordion title="Setting up OpenAI API Key">
+  1. Go to [platform.openai.com](https://platform.openai.com)
+  2. Create an account and add payment method
+  3. Generate an API key
+  4. In Cursor: Settings → Cursor Settings → API Keys
+  5. Paste your OpenAI key
+  
+  **Cost:** ~$0.01-0.10 per request depending on usage
+</Accordion>
+
+<Accordion title="Setting up Anthropic API Key">
+  1. Go to [console.anthropic.com](https://console.anthropic.com)
+  2. Create an account and add credits
+  3. Generate an API key
+  4. In Cursor: Settings → Cursor Settings → API Keys
+  5. Paste your Anthropic key
+  
+  **Cost:** Similar to OpenAI, pay-as-you-go
+</Accordion>
+
+## Pricing Options
+
+<Tabs>
+  <Tab title="Free Tier">
+    ### Cursor Free
+    
+    **Cost:** $0
+    
+    **Includes:**
+    - 2,000 completions/month
+    - 50 Cursor Premium requests
+    - Basic AI features
+    
+    **Good for:** Trying out Cursor, light usage
+  </Tab>
+  
+  <Tab title="Cursor Pro">
+    ### Cursor Pro
+    
+    **Cost:** $20/month
+    
+    **Includes:**
+    - Unlimited completions
+    - Unlimited Premium requests
+    - GPT-4, Claude 3.5 Sonnet
+    - Priority support
+    - Faster responses
+    
+    **Good for:** Regular users, professionals
+  </Tab>
+  
+  <Tab title="Own API Keys">
+    ### Bring Your Own Key
+    
+    **Cost:** Pay-as-you-go to OpenAI/Anthropic
+    
+    **Includes:**
+    - Use any model
+    - Direct API access
+    - More control
+    - Typically $10-30/month for moderate use
+    
+    **Good for:** Power users, developers
+  </Tab>
+</Tabs>
+
+<Tip>
+  **Recommendation for our users:** Start with free tier to try it out. If you love it, Pro is the easiest option. API keys give you the most control but require more setup.
+</Tip>
+
+## Verifying Installation
+
+Let's make sure everything works:
+
+<Checklist>
+  - [ ] Cursor launches without errors
+  - [ ] You can create a new file
+  - [ ] You can open the AI chat (Cmd/Ctrl + L)
+  - [ ] AI responds to a test prompt like "Hello, tell me about Obsidian"
+  - [ ] You can open a folder (File → Open Folder)
+</Checklist>
+
+## Essential Shortcuts
+
+Memorize these - you'll use them constantly:
+
+<CardGroup cols={2}>
+  <Card title="Cmd/Ctrl + L" icon="message">
+    Open AI chat panel
+  </Card>
+  <Card title="Cmd/Ctrl + K" icon="keyboard">
+    AI inline edit (highlight text first)
+  </Card>
+  <Card title="Cmd/Ctrl + I" icon="wand-magic-sparkles">
+    Composer (generate entire files)
+  </Card>
+  <Card title="Cmd/Ctrl + P" icon="search">
+    Quick file search
+  </Card>
+  <Card title="Cmd/Ctrl + Shift + P" icon="terminal">
+    Command palette
+  </Card>
+  <Card title="Cmd/Ctrl + `" icon="square-terminal">
+    Toggle terminal
+  </Card>
+</CardGroup>
+
+## Installing Useful Extensions
+
+Cursor supports VS Code extensions. Here are some useful ones:
+
+<Steps>
+  <Step title="Open Extensions">
+    Click the Extensions icon on the left sidebar (or Cmd/Ctrl + Shift + X)
+  </Step>
+  <Step title="Install Markdown Extensions">
+    Search and install:
+    - **Markdown All in One** - Enhanced markdown support
+    - **Markdown Preview Enhanced** - Better preview
+    - **Paste Image** - Easy image insertion
+  </Step>
+  <Step title="Optional: Obsidian Tools">
+    - **Obsidian Tools** - Extra Obsidian integration
+    - **Front Matter** - Manage YAML frontmatter
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Cursor won't launch on macOS">
+    **Solution:** 
+    - Check System Preferences → Security & Privacy
+    - Click "Open Anyway"
+    - Make sure macOS is 10.15 or newer
+  </Accordion>
+  
+  <Accordion title="AI not responding">
+    **Solution:**
+    - Check your internet connection
+    - Verify you're signed in or have API keys set
+    - Check if you've exceeded free tier limits
+    - Try switching to a different model
+  </Accordion>
+  
+  <Accordion title="Can't open Obsidian vault folder">
+    **Solution:**
+    - Use File → Open Folder
+    - Navigate to your vault folder
+    - Make sure you have read/write permissions
+    - On Mac, you may need to grant Cursor folder access
+  </Accordion>
+  
+  <Accordion title="Slow performance">
+    **Solution:**
+    - Close unnecessary tabs
+    - Reduce max context in settings
+    - Disable resource-heavy extensions
+    - Consider using a faster AI model for simple tasks
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<Steps>
+  <Step title="Open Your Vault">
+    Learn how to connect Cursor to your Obsidian vault
+    
+    [Go to Integration Guide →](/cursor-guide/obsidian-integration)
+  </Step>
+  <Step title="Learn Prompting">
+    Master the art of communicating with AI
+    
+    [Go to Prompts Guide →](/cursor-guide/prompts)
+  </Step>
+</Steps>
+
+## Quick Start Test
+
+Let's verify everything works with a quick test:
+
+<Steps>
+  <Step title="Open Chat">
+    Press `Cmd/Ctrl + L` to open AI chat
+  </Step>
+  <Step title="Ask a Question">
+    Type: "Explain what Obsidian is in one sentence"
+  </Step>
+  <Step title="Get Response">
+    If AI responds, you're all set! 🎉
+  </Step>
+</Steps>
+
+<Card title="Ready to Connect Obsidian?" icon="link" href="/cursor-guide/obsidian-integration">
+  Next: Learn how to work with your Obsidian vault in Cursor
+</Card>
+

@@ -1,0 +1,568 @@
+---
+title: Creating Obsidian Canvases with AI
+description: Generate visual diagrams and mind maps automatically
+---
+
+## What are Obsidian Canvases?
+
+Obsidian Canvas is a visual workspace where you can:
+- Arrange notes spatially
+- Draw connections between ideas
+- Create mind maps and diagrams
+- Plan projects visually
+- Build knowledge maps
+
+<img
+  src="/public/images/canvas-example.png"
+  alt="Obsidian Canvas Example"
+  caption="Visual organization of ideas in Obsidian Canvas"
+/>
+
+## Why Use Cursor to Create Canvases?
+
+Creating canvases manually can be time-consuming. Cursor can:
+- Generate entire canvases from descriptions
+- Auto-arrange nodes logically
+- Create connections automatically
+- Build complex diagrams in seconds
+
+<Info>
+  **Canvas files** are JSON files with `.canvas` extension that Obsidian renders visually.
+</Info>
+
+## Canvas File Structure
+
+A basic canvas file looks like this:
+
+```json
+{
+  "nodes": [
+    {
+      "id": "node-1",
+      "type": "text",
+      "text": "Central Idea",
+      "x": 0,
+      "y": 0,
+      "width": 250,
+      "height": 60,
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-1",
+      "fromNode": "node-1",
+      "toNode": "node-2"
+    }
+  ]
+}
+```
+
+<Tip>
+  You don't need to understand JSON! Just tell Cursor what you want, and it handles the technical details.
+</Tip>
+
+## Basic Canvas Creation
+
+### Simple Example: Family Tree
+
+**Your prompt:**
+```
+Create a canvas file called "Family-Tree.canvas" showing:
+
+- Central node: "Our Family"
+- Parent nodes: "Mom" and "Dad"
+- Child nodes: "Me", "Sister", "Brother"
+- Connect parents to "Our Family"
+- Connect children to "Our Family"
+
+Arrange in a tree structure.
+```
+
+**What Cursor creates:**
+- JSON file with proper structure
+- Nodes positioned logically
+- Connections (edges) between related nodes
+- Ready to open in Obsidian!
+
+### Project Planning Canvas
+
+**Your prompt:**
+```
+Create "Project-Plan.canvas" with these elements:
+
+Main project node in center: "Court Case Preparation"
+
+Four surrounding areas:
+1. Research (top)
+   - Nodes: Legal Standards, Case Law, Procedures
+2. Evidence (right)
+   - Nodes: Documents, Timeline, Witnesses
+3. Strategy (bottom)
+   - Nodes: Key Arguments, Counterarguments, Presentation
+4. Tasks (left)
+   - Nodes: Immediate, This Week, This Month
+
+Connect each area to the center.
+Color code: Research=blue, Evidence=green, Strategy=red, Tasks=yellow
+```
+
+## Advanced Canvas Prompts
+
+### Timeline Canvas
+
+**For legal cases, project management, historical events:**
+
+```
+Create "Case-Timeline.canvas" showing events chronologically:
+
+Read these notes:
+@event1.md
+@event2.md
+@event3.md
+
+For each event, create a node with:
+- Date as title
+- Brief description
+- Link to the source note
+
+Arrange horizontally (left=oldest, right=newest)
+Connect nodes with arrows showing progression
+Add milestone markers at key decision points
+```
+
+### Mind Map Canvas
+
+**For brainstorming, research synthesis:**
+
+```
+Create "Research-Map.canvas" as a mind map:
+
+Central topic: "Child Custody Research"
+
+Main branches:
+- Legal Rights (with sub-branches from @LegalRights/ notes)
+- Best Practices (with sub-branches from @BestPractices/ notes)
+- Case Studies (with sub-branches from @CaseStudies/ notes)
+- Resources (with sub-branches from @Resources/ notes)
+
+Auto-generate sub-branches based on note titles in each folder
+Color code main branches differently
+Arrange radially around center
+```
+
+### Argument Structure Canvas
+
+**For court preparation, essay planning:**
+
+```
+Create "Argument-Structure.canvas" showing:
+
+Top: Main Claim
+  "I should have 50-50 custody"
+
+Second level: Supporting Arguments (3 nodes)
+  - "Child's best interest"
+  - "My capability as parent"
+  - "Historical involvement"
+
+Third level: Evidence for each argument
+  (Create nodes from @Evidence/ folder, connecting to relevant arguments)
+
+Bottom level: Responses to counter-arguments
+  (Create nodes from @Counterarguments/ folder)
+
+Arrange as hierarchy top-to-bottom
+Use green for strengths, yellow for areas to address
+```
+
+## Node Types
+
+Canvases support different node types:
+
+<Tabs>
+  <Tab title="Text Nodes">
+    ### Text Nodes
+    
+    Plain text content directly in the canvas.
+    
+    **Prompt example:**
+    ```
+    Add a text node saying "Key Insight: ..." at position x:100, y:100
+    ```
+    
+    **Best for:**
+    - Labels
+    - Short notes
+    - Headings
+    - Quick ideas
+  </Tab>
+  
+  <Tab title="File Nodes">
+    ### File Nodes
+    
+    Embedded notes from your vault.
+    
+    **Prompt example:**
+    ```
+    Add nodes for all notes in @Research/ folder
+    Link each to its corresponding note file
+    ```
+    
+    **Best for:**
+    - Connecting existing notes
+    - Building on previous work
+    - Maintaining links
+  </Tab>
+  
+  <Tab title="Link Nodes">
+    ### Link Nodes (Web URLs)
+    
+    External web links.
+    
+    **Prompt example:**
+    ```
+    Add a node for this resource: https://example.com
+    Label it "Court Procedures Guide"
+    ```
+    
+    **Best for:**
+    - External references
+    - Websites
+    - Online resources
+  </Tab>
+  
+  <Tab title="Media Nodes">
+    ### Media Nodes (Images, PDFs)
+    
+    Embedded images or documents.
+    
+    **Prompt example:**
+    ```
+    Add an image node displaying "diagram.png" from my vault
+    ```
+    
+    **Best for:**
+    - Visual references
+    - Diagrams
+    - Photos
+    - PDFs
+  </Tab>
+</Tabs>
+
+## Styling & Layout
+
+### Colors
+
+Obsidian Canvas supports 6 colors (numbered 1-6):
+
+**Prompt example:**
+```
+Create nodes and color them:
+- Research topics: color 1 (red)
+- Completed tasks: color 2 (orange)
+- In-progress: color 3 (yellow)
+- Resources: color 4 (green)
+- Ideas: color 5 (blue)
+- Questions: color 6 (purple)
+```
+
+### Positioning
+
+You can specify layouts:
+
+**Grid Layout:**
+```
+Arrange nodes in a 3x3 grid
+Spacing: 300 pixels horizontal, 200 pixels vertical
+Top-left corner at x:0, y:0
+```
+
+**Circular Layout:**
+```
+Arrange 8 nodes in a circle
+Center at x:400, y:400
+Radius: 300 pixels
+```
+
+**Hierarchical Layout:**
+```
+Arrange as tree structure:
+- Root at top center
+- Children below, spread horizontally
+- 3 levels deep
+- 150px vertical spacing between levels
+```
+
+## Real-World Examples
+
+### Example 1: School Comparison Canvas
+
+<Accordion title="Prompt & Result">
+  **Prompt:**
+  ```
+  Create "School-Comparison.canvas" with:
+  
+  Three columns (one per school):
+  - Oak Elementary
+  - Maple School  
+  - Pine Academy
+  
+  For each school, create nodes for:
+  - Cost (link to [[SchoolName-Cost]] note)
+  - Distance
+  - Programs
+  - Ratings
+  - Pros/Cons
+  
+  Stack vertically within each column
+  Color green for top choice indicators
+  Color red for concerns
+  
+  Add a comparison summary node at bottom
+  ```
+  
+  **Result:**
+  Visual side-by-side comparison perfect for family decisions
+</Accordion>
+
+### Example 2: Case Evidence Canvas
+
+<Accordion title="Prompt & Result">
+  **Prompt:**
+  ```
+  Create "Evidence-Map.canvas" for my custody case:
+  
+  Central node: "Evidence for Custody"
+  
+  Four quadrants:
+  1. Documentary Evidence (top-left)
+     - Link to all @Documents/ notes
+  2. Witness Testimony (top-right)
+     - Node for each person in @Witnesses/
+  3. Timeline Evidence (bottom-left)
+     - Events showing my involvement
+  4. Counter-Evidence (bottom-right)
+     - How to address opposing claims
+  
+  Connect supporting evidence to central claim
+  Color code: Strong=green, Medium=yellow, Needs-work=red
+  ```
+  
+  **Result:**
+  Complete visual of your case structure for court prep
+</Accordion>
+
+### Example 3: Research Literature Map
+
+<Accordion title="Prompt & Result">
+  **Prompt:**
+  ```
+  Create "Literature-Map.canvas" from my research notes:
+  
+  Read all notes in @Papers/ folder
+  Extract main themes/topics mentioned
+  
+  Create:
+  - Central node for research question
+  - One node per theme identified
+  - One node per paper (linked to actual note)
+  - Connect papers to their relevant themes
+  - Connect themes to research question
+  
+  Arrange themes in a circle around center
+  Arrange papers around their themes
+  ```
+  
+  **Result:**
+  Visual literature review showing how papers relate to themes
+</Accordion>
+
+### Example 4: Weekly Planning Canvas
+
+<Accordion title="Prompt & Result">
+  **Prompt:**
+  ```
+  Create "Weekly-Plan.canvas" template:
+  
+  Seven columns for Mon-Sun
+  
+  For each day, stack nodes for:
+  - Morning priorities (3 items)
+  - Afternoon tasks
+  - Evening review
+  
+  Add weekly goals section at top
+  Add reflection section at bottom
+  
+  Use color coding:
+  - Work tasks: blue
+  - Family: green
+  - Personal: purple
+  - Urgent: red
+  ```
+  
+  **Result:**
+  Reusable weekly planning canvas you can duplicate each week
+</Accordion>
+
+## Converting Notes to Canvas
+
+You can transform existing notes into visual canvases:
+
+**Prompt:**
+```
+Read @ProjectNotes.md and create a canvas visualization:
+
+- Main headings become primary nodes
+- Bullet points become child nodes
+- Links between notes become edges
+- Arrange as mind map radiating from center
+
+Call it "Project-Visual.canvas"
+```
+
+## Batch Canvas Creation
+
+Create multiple canvases at once:
+
+**Prompt:**
+```
+For each note in @People/ folder, create a canvas showing:
+- Person's name as central node
+- Related documents as surrounding nodes
+- Connections they have to other people
+- Timeline of interactions
+
+Name each canvas "[PersonName]-Network.canvas"
+Save in @Canvases/ folder
+```
+
+## Interactive Development
+
+Build canvases iteratively:
+
+<Steps>
+  <Step title="Start Simple">
+    ```
+    Create a basic canvas with 5 nodes for main topics
+    ```
+  </Step>
+  <Step title="Review in Obsidian">
+    Open the canvas, see what you like/don't like
+  </Step>
+  <Step title="Refine in Cursor">
+    ```
+    Add sub-nodes for each main topic
+    Color code by priority
+    ```
+  </Step>
+  <Step title="Add Details">
+    ```
+    Link each node to corresponding notes in my vault
+    ```
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Canvas won't open in Obsidian">
+    **Solution:**
+    - Check file has `.canvas` extension
+    - Verify JSON is valid (ask Cursor to validate)
+    - Make sure it's inside your vault folder
+  </Accordion>
+  
+  <Accordion title="Nodes are overlapping">
+    **Solution:**
+    Ask Cursor to reposition:
+    ```
+    Spread out the nodes more - give 400px spacing between them
+    ```
+  </Accordion>
+  
+  <Accordion title="Links don't work">
+    **Solution:**
+    Make sure file paths are correct:
+    ```
+    Update all file node paths to match actual note locations in my vault
+    ```
+  </Accordion>
+  
+  <Accordion title="Too cluttered">
+    **Solution:**
+    Simplify:
+    ```
+    Reduce to just top-level nodes, remove sub-details
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Start Small" icon="seedling">
+    Begin with simple structures, add complexity gradually
+  </Card>
+  <Card title="Test Often" icon="flask">
+    Open in Obsidian frequently to check progress
+  </Card>
+  <Card title="Use Templates" icon="copy">
+    Create reusable canvas structures
+  </Card>
+  <Card title="Mind Spacing" icon="expand">
+    Give nodes room to breathe
+  </Card>
+  <Card title="Color Purposefully" icon="palette">
+    Consistent color coding aids understanding
+  </Card>
+  <Card title="Link Back" icon="link">
+    Connect canvas nodes to actual notes
+  </Card>
+</CardGroup>
+
+## Canvas Templates
+
+Ask Cursor to create these templates you can reuse:
+
+**Project Template:**
+```
+Create a canvas template for project planning with:
+Goals, Tasks, Resources, Timeline, Team sections
+```
+
+**Research Template:**
+```
+Create a canvas template for research with:
+Question, Literature, Methods, Findings, Next Steps sections
+```
+
+**Decision Template:**
+```
+Create a canvas template for decision-making with:
+Options, Pros/Cons for each, Criteria, Final Decision sections
+```
+
+## Next Steps
+
+<Steps>
+  <Step title="Try It">
+    Create your first canvas using one of the prompts above
+  </Step>
+  <Step title="Join Workshop">
+    Get hands-on help creating canvases for your specific needs
+    
+    [Go to Workshops →](/workshops/overview)
+  </Step>
+  <Step title="Share Your Canvas">
+    Show others what you've created in our community
+    
+    [Go to Community →](/resources/community)
+  </Step>
+</Steps>
+
+<Card title="Need Inspiration?" icon="lightbulb" href="/resources/stories">
+  See how others are using canvases for family planning, research, and organizing
+</Card>
+

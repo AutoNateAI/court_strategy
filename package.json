@@ -1,0 +1,23 @@
+{
+  "name": "autonate-ai-docs",
+  "version": "1.0.0",
+  "description": "Autonate AI - AI-powered tools for families and communities",
+  "scripts": {
+    "dev": "mintlify dev",
+    "build": "mintlify build",
+    "install:mintlify": "npm i -g mintlify"
+  },
+  "keywords": [
+    "documentation",
+    "obsidian",
+    "cursor",
+    "ai",
+    "workshops"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "mintlify": "^4.0.0"
+  }
+}
+

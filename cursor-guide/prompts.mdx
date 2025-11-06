@@ -1,0 +1,578 @@
+---
+title: AI Prompting Guide
+description: Master the art of communicating with AI for maximum productivity
+---
+
+## What is a Prompt?
+
+A **prompt** is simply how you communicate with AI. Think of it as giving instructions to a very capable assistant who needs clear direction.
+
+<Info>
+  **Good news:** You don't need to learn special syntax or commands. Natural language works great!
+</Info>
+
+## Anatomy of a Good Prompt
+
+The best prompts have three elements:
+
+<CardGroup cols={3}>
+  <Card title="Context" icon="map">
+    What is the situation?
+  </Card>
+  <Card title="Task" icon="list-check">
+    What do you want done?
+  </Card>
+  <Card title="Format" icon="table">
+    How should the output look?
+  </Card>
+</CardGroup>
+
+### Example Breakdown
+
+**Bad prompt:**
+```
+Organize notes
+```
+
+**Good prompt:**
+```
+Context: I have meeting notes scattered across my vault
+Task: Create a summary document of all meetings from January 2024
+Format: Use a table with columns: Date, Attendees, Key Decisions, Action Items
+```
+
+## Prompt Templates for Obsidian
+
+### Creating Content
+
+**Template: New Note from Description**
+```
+Create a new note called "[NAME].md" in the [FOLDER] folder.
+
+Include these sections:
+- [Section 1]
+- [Section 2]
+- [Section 3]
+
+Use YAML frontmatter with: date, tags, status
+```
+
+**Example:**
+```
+Create a new note called "School Visit - Oak Elementary.md" 
+in the Education folder.
+
+Include these sections:
+- First Impressions
+- Facilities
+- Teachers Met
+- Pros and Cons
+- Next Steps
+
+Use YAML frontmatter with: date, tags: [education, school], status: needs-review
+```
+
+### Analyzing Content
+
+**Template: Summarization**
+```
+@[filename.md] Read this note and create a summary that:
+- Highlights the [X] most important points
+- Is written in [tone: professional/casual/etc]
+- Is approximately [X] sentences/paragraphs long
+- Includes links to related topics if mentioned
+```
+
+**Example:**
+```
+@legal-meeting-notes.md Read this note and create a summary that:
+- Highlights the 5 most important points
+- Is written in a clear, professional tone
+- Is approximately 1 paragraph long
+- Includes links to any people or documents mentioned
+```
+
+### Organizing & Restructuring
+
+**Template: Batch Organization**
+```
+@[folder]/ Look at all notes in this folder and:
+1. [What to analyze]
+2. [What to create/change]
+3. [How to format the result]
+
+Make sure to [specific requirement]
+```
+
+**Example:**
+```
+@Research/ Look at all notes in this folder and:
+1. Identify the main topics covered
+2. Create a "Research Index.md" file that lists all notes by topic
+3. Format as a markdown outline with links to each note
+
+Make sure to preserve all original filenames exactly
+```
+
+### Data Extraction
+
+**Template: Information Gathering**
+```
+Search through [location] and find all instances of [what you're looking for].
+
+Create a new note called "[name]" with:
+- [Format specification]
+- [What to include]
+- [What to exclude]
+
+Sort by [criteria]
+```
+
+**Example:**
+```
+Search through my entire vault and find all instances of deadlines or due dates.
+
+Create a new note called "All Deadlines.md" with:
+- A table showing: Task, Deadline, Source Note, Status
+- Only include future dates
+- Exclude completed items
+
+Sort by date (soonest first)
+```
+
+## Advanced Prompt Techniques
+
+### Technique 1: Chain of Thought
+
+For complex tasks, break it into steps:
+
+```
+I want to organize my family vault. Here's my plan:
+
+Step 1: Scan all notes and identify which ones mention health, education, or legal topics
+Step 2: Create index notes for each category
+Step 3: Add links in the index to relevant notes
+Step 4: Add backlinks in each note to its category index
+
+Start with Step 1 and show me what you find. 
+Wait for my approval before moving to Step 2.
+```
+
+<Tip>
+  Breaking complex tasks into steps gives you control and better results
+</Tip>
+
+### Technique 2: Provide Examples
+
+Show AI what you want:
+
+```
+Create meeting notes for today's school visit.
+
+Format them like this example:
+
+# Meeting: [Name]
+Date: 2024-01-15
+Attendees: [[Person 1]], [[Person 2]]
+
+## Discussion
+- Topic 1
+- Topic 2
+
+## Decisions
+- Decision 1
+
+## Action Items
+- [ ] Task for [[Person]]
+
+Use this exact format for "School Visit - Oak Elementary" 
+that happened today with Mrs. Johnson.
+```
+
+### Technique 3: Specify Constraints
+
+Tell AI what NOT to do:
+
+```
+Create a summary of all my research notes.
+
+Requirements:
+- DO include key findings and sources
+- DO use markdown formatting
+- DON'T change any [[wiki links]]
+- DON'T modify the original notes
+- DON'T remove any tags
+- Maximum length: 2 pages
+```
+
+### Technique 4: Iterative Refinement
+
+Start broad, then refine:
+
+```
+First prompt: "Summarize my meeting notes from last week"
+→ Review output
+
+Second prompt: "Good, but make it more detailed and add action items"
+→ Review output
+
+Third prompt: "Perfect, now format as a table instead"
+→ Final result
+```
+
+## Prompts for Specific Use Cases
+
+<Tabs>
+  <Tab title="Legal Research">
+    ### Legal & Court Research Prompts
+    
+    **Timeline Creation:**
+    ```
+    @CaseNotes/ Read all notes and create a timeline document.
+    
+    Format:
+    # Case Timeline
+    
+    ## YYYY-MM-DD - Event Title
+    **What happened:** Description
+    **Source:** [[Note Name]]
+    **Significance:** Why this matters
+    
+    Sort chronologically, earliest first.
+    Include only verified facts with sources.
+    ```
+    
+    **Document Analysis:**
+    ```
+    @court-filing.md Analyze this document and:
+    1. Identify key claims made
+    2. List all evidence referenced
+    3. Note any deadlines or dates
+    4. Flag anything that seems important
+    
+    Create a summary note with these findings.
+    ```
+    
+    **Preparation Checklist:**
+    ```
+    Based on my case notes, create a court preparation checklist.
+    
+    Include sections for:
+    - Documents to bring
+    - Questions to ask
+    - Points to emphasize
+    - Potential objections to prepare for
+    
+    Link to relevant notes for each item.
+    ```
+  </Tab>
+  
+  <Tab title="Family Planning">
+    ### Family Organization Prompts
+    
+    **Health Records Index:**
+    ```
+    @Health/ Create a health records index with:
+    
+    For each family member:
+    - Recent visits
+    - Current medications
+    - Upcoming appointments
+    - Important medical history
+    
+    Format as sections by family member, with links to detailed notes.
+    ```
+    
+    **School Comparison:**
+    ```
+    I have notes on 3 schools. Create a comparison table with:
+    
+    Columns: School Name, Cost, Distance, Rating, Special Programs, Pros, Cons
+    Rows: One for each school
+    
+    Pull information from these notes:
+    @OakElementary.md
+    @MapleSchool.md
+    @PineAcademy.md
+    ```
+    
+    **Weekly Family Plan:**
+    ```
+    Create a weekly planning template called "Weekly-Family-Plan.md"
+    
+    Include:
+    - Monday-Sunday with daily sections
+    - Meals planning area
+    - Activities and appointments
+    - Shopping list
+    - Notes section
+    
+    Make it easy to fill out each week.
+    ```
+  </Tab>
+  
+  <Tab title="Research">
+    ### Research & Study Prompts
+    
+    **Literature Review:**
+    ```
+    @Literature/ Read all my literature notes and create a synthesis.
+    
+    Organize by theme, not by paper.
+    
+    For each theme:
+    - Main findings across papers
+    - Agreements and disagreements
+    - Gaps in research
+    - My thoughts
+    
+    Include citations [[Author-Year]] format.
+    ```
+    
+    **Research Questions:**
+    ```
+    Based on my notes in @ResearchIdeas/, generate:
+    
+    1. Main research question
+    2. 5 sub-questions
+    3. Methodology suggestions
+    4. Potential challenges
+    
+    Make it clear and focused on [topic].
+    ```
+    
+    **Reading Notes Template:**
+    ```
+    Create a template for academic reading notes.
+    
+    Include:
+    - Bibliographic info
+    - Key arguments
+    - Evidence presented
+    - My reactions
+    - Related to (other notes)
+    - Questions raised
+    
+    Use clear markdown formatting.
+    ```
+  </Tab>
+  
+  <Tab title="Community">
+    ### Community Organizing Prompts
+    
+    **Issue Tracker:**
+    ```
+    Create an issue tracking note for [issue name].
+    
+    Include:
+    - Current status
+    - Key stakeholders (supporters and opponents)
+    - Timeline of events
+    - Next actions
+    - Resources needed
+    - Success metrics
+    
+    Format for easy weekly updates.
+    ```
+    
+    **Meeting Minutes:**
+    ```
+    I'll provide notes from today's meeting. 
+    Format them as official meeting minutes:
+    
+    - Meeting metadata (date, attendees, location)
+    - Agenda items discussed
+    - Decisions made
+    - Action items with owners
+    - Next meeting details
+    
+    [Paste your rough notes here]
+    ```
+    
+    **Campaign Strategy:**
+    ```
+    Based on notes in @Campaign/, create a strategy overview.
+    
+    Include:
+    - Campaign goals
+    - Target audiences
+    - Key messages
+    - Tactics and timeline
+    - Success metrics
+    - Resources needed
+    
+    Make it a living document we can update.
+    ```
+  </Tab>
+</Tabs>
+
+## Common Mistakes & Fixes
+
+<AccordionGroup>
+  <Accordion title="Mistake: Too Vague">
+    **Bad:** "Fix my notes"
+    
+    **Better:** "Read notes in @Family/ folder and ensure all have YAML frontmatter with date and tags fields"
+    
+    **Why:** AI needs to know exactly what "fix" means
+  </Accordion>
+  
+  <Accordion title="Mistake: Too Many Tasks at Once">
+    **Bad:** "Organize everything, create indexes, fix tags, and generate summaries"
+    
+    **Better:** "First, create an index of all notes in @Research/ grouped by topic"
+    
+    **Why:** One task at a time produces better results
+  </Accordion>
+  
+  <Accordion title="Mistake: No Context">
+    **Bad:** "Summarize this"
+    
+    **Better:** "@meeting-notes.md Summarize this meeting note for someone who wasn't there, focusing on decisions and action items"
+    
+    **Why:** Context helps AI understand your goal
+  </Accordion>
+  
+  <Accordion title="Mistake: Assuming AI Remembers">
+    **Bad:** "Now do the same for the other files" (in a new chat)
+    
+    **Better:** Repeat the full instruction with new file names
+    
+    **Why:** Each prompt should be self-contained
+  </Accordion>
+</AccordionGroup>
+
+## Prompt Library
+
+### Quick Actions
+
+Copy these and customize:
+
+**Quick Summary:**
+```
+@[file] Give me a 3-bullet summary of this note
+```
+
+**Find Related:**
+```
+@[file] What other notes in my vault relate to this topic?
+```
+
+**Expand Ideas:**
+```
+Take this sentence: "[your sentence]" and expand it into a full paragraph
+```
+
+**Create Checklist:**
+```
+Turn this into an actionable checklist: [paste text]
+```
+
+**Format as Table:**
+```
+Convert this information into a markdown table: [paste data]
+```
+
+### File Operations
+
+**Rename Files:**
+```
+Rename all files in @[folder]/ to use YYYY-MM-DD-Title format based on their content
+```
+
+**Add Frontmatter:**
+```
+Add YAML frontmatter to all notes in @[folder]/ with: date, tags, status
+```
+
+**Create MOC (Map of Content):**
+```
+Create a Map of Content for @[folder]/ that links to all notes organized by subtopic
+```
+
+## Practice Exercises
+
+Try these to build your skills:
+
+<Steps>
+  <Step title="Exercise 1: Simple Summary">
+    Choose any note and ask:
+    ```
+    @[your-note].md Summarize in 5 bullet points
+    ```
+  </Step>
+  
+  <Step title="Exercise 2: Create Template">
+    Ask AI to create a template for something you do regularly
+  </Step>
+  
+  <Step title="Exercise 3: Find Connections">
+    ```
+    What themes connect notes in @[folder]/? Create a visual map.
+    ```
+  </Step>
+  
+  <Step title="Exercise 4: Batch Edit">
+    ```
+    Add a "created: [date]" line to all notes in @[folder]/ 
+    based on file creation date
+    ```
+  </Step>
+</Steps>
+
+## Tips for Success
+
+<CardGroup cols={2}>
+  <Card title="Be Specific" icon="bullseye">
+    Detailed prompts get better results
+  </Card>
+  <Card title="Provide Examples" icon="book-open">
+    Show AI what you want
+  </Card>
+  <Card title="Iterate" icon="arrows-rotate">
+    Refine based on output
+  </Card>
+  <Card title="Use @mentions" icon="at">
+    Point AI to specific files
+  </Card>
+  <Card title="Break It Down" icon="list-ol">
+    Complex tasks into steps
+  </Card>
+  <Card title="Review Output" icon="eye">
+    Always check AI results
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+<Steps>
+  <Step title="Practice">
+    Try these prompts on your own vault
+  </Step>
+  <Step title="Learn Canvas Creation">
+    Use AI to generate visual diagrams
+    
+    [Go to Canvas Guide →](/cursor-guide/canvas-creation)
+  </Step>
+  <Step title="Join Community">
+    Share prompts and learn from others
+    
+    [Go to Community →](/resources/community)
+  </Step>
+</Steps>
+
+## Prompt Troubleshooting
+
+<Warning>
+  **If AI isn't giving good results:**
+  1. Add more context
+  2. Be more specific
+  3. Provide an example
+  4. Break into smaller tasks
+  5. Try rephrasing
+</Warning>
+
+<Card title="Get More Help" icon="circle-question" href="/resources/faq">
+  Check our FAQ for common prompt questions
+</Card>
+

@@ -1,0 +1,475 @@
+---
+title: Obsidian + Cursor Integration
+description: Connect Cursor to your Obsidian vault for AI-powered workflows
+---
+
+## Opening Your Vault in Cursor
+
+The first step to using Cursor with Obsidian is opening your vault folder:
+
+<Steps>
+  <Step title="Launch Cursor">
+    Open Cursor application
+  </Step>
+  <Step title="Open Folder">
+    **File → Open Folder** (or `Cmd/Ctrl + K, Cmd/Ctrl + O`)
+  </Step>
+  <Step title="Navigate to Vault">
+    Browse to your Obsidian vault folder location:
+    - Usually in Documents folder
+    - Look for the folder you named when creating the vault
+  </Step>
+  <Step title="Click Open">
+    Cursor will load your entire vault in the file explorer
+  </Step>
+</Steps>
+
+<Tip>
+  **Keep Both Open:** Run Obsidian and Cursor side-by-side. Changes in one appear instantly in the other!
+</Tip>
+
+## Understanding the Workspace
+
+Once your vault is open, you'll see:
+
+<Tabs>
+  <Tab title="File Explorer">
+    ### Left Sidebar: File Explorer
+    
+    - All your vault folders and files
+    - Same structure as in Obsidian
+    - Click any `.md` file to open it
+    - Right-click for more options
+    
+    <Info>
+      Files with `.md` extension are your notes
+    </Info>
+  </Tab>
+  
+  <Tab title="Editor">
+    ### Center: Editor
+    
+    - Edit markdown files directly
+    - See your notes as plain text
+    - Syntax highlighting for markdown
+    - Edit multiple files in tabs
+  </Tab>
+  
+  <Tab title="AI Chat">
+    ### Right Sidebar: AI Chat
+    
+    - Press `Cmd/Ctrl + L` to open
+    - Ask AI questions about your vault
+    - Request file modifications
+    - Generate new content
+  </Tab>
+</Tabs>
+
+## Working with Markdown Files
+
+Obsidian uses markdown (`.md`) files. Here's what they look like in Cursor:
+
+```markdown
+# My Note Title
+
+This is a regular paragraph with [[Wiki Links]] to other notes.
+
+- Bullet point
+- Another point
+
+## Section Header
+
+You can use #tags and **bold** and *italic* text.
+
+![[Embedded Image.png]]
+```
+
+<Accordion title="Understanding Obsidian Syntax">
+  **Internal Links:**
+  - `[[Note Name]]` - Links to another note
+  - `[[Note Name|Display Text]]` - Link with custom text
+  - `[[Note Name#Heading]]` - Link to specific section
+  
+  **Embeds:**
+  - `![[Note Name]]` - Embeds another note
+  - `![[Image.png]]` - Embeds an image
+  
+  **Tags:**
+  - `#tag` - Single word tag
+  - `#multi-word-tag` - Multi-word tag
+</Accordion>
+
+## Basic AI Tasks
+
+### Task 1: Ask About Your Vault
+
+Open AI chat (`Cmd/Ctrl + L`) and try:
+
+```
+What notes do I have in my vault related to family planning?
+```
+
+The AI will scan your vault and list relevant notes.
+
+### Task 2: Summarize a Note
+
+Open a note, then ask in chat:
+
+```
+Summarize this note in 3 bullet points
+```
+
+### Task 3: Create a New Note
+
+In the chat, ask:
+
+```
+Create a new note called "Weekly Review Template.md" in my Templates folder
+with sections for: Wins, Challenges, Next Week Goals
+```
+
+AI will create the file for you!
+
+## Advanced: Using @mentions
+
+Tell AI which files to focus on using @mentions:
+
+<Accordion title="@mention Syntax">
+  **Reference specific files:**
+  ```
+  @filename.md analyze the timeline in this note
+  ```
+  
+  **Reference folders:**
+  ```
+  @foldername/ summarize all notes in this folder
+  ```
+  
+  **Reference codebase:**
+  ```
+  @codebase find all notes mentioning "custody"
+  ```
+</Accordion>
+
+## Practical Workflows
+
+### Workflow 1: Daily Note Creation
+
+<Steps>
+  <Step title="Open AI Chat">
+    Press `Cmd/Ctrl + L`
+  </Step>
+  <Step title="Request Daily Note">
+    ```
+    Create today's daily note in my Daily Notes folder.
+    Use format: YYYY-MM-DD.md
+    Include: weather prompt, gratitude section, top 3 tasks, journal area
+    ```
+  </Step>
+  <Step title="Open in Obsidian">
+    Switch to Obsidian - your new note is there!
+  </Step>
+</Steps>
+
+### Workflow 2: Batch Rename Files
+
+<Steps>
+  <Step title="Describe What You Want">
+    ```
+    Rename all files in my "Research" folder to use 
+    YYYY-MM-DD prefix format based on their creation date
+    ```
+  </Step>
+  <Step title="Review Changes">
+    AI will show you what it plans to do
+  </Step>
+  <Step title="Approve">
+    Type "yes" to proceed or request modifications
+  </Step>
+</Steps>
+
+### Workflow 3: Extract Information
+
+<Steps>
+  <Step title="Open AI Chat">
+    With your vault open in Cursor
+  </Step>
+  <Step title="Ask for Extraction">
+    ```
+    @Research/ Read all notes in the Research folder and 
+    create a new note called "Key Findings.md" that lists 
+    the most important insights from each note
+    ```
+  </Step>
+  <Step title="Review Output">
+    AI creates the summary note with links back to sources
+  </Step>
+</Steps>
+
+## Working with Canvas Files
+
+Canvas files (`.canvas`) are JSON files. Cursor can create and edit them!
+
+<Accordion title="Canvas File Structure">
+  A canvas file looks like this:
+  ```json
+  {
+    "nodes": [
+      {
+        "id": "unique-id",
+        "type": "text",
+        "text": "Node content",
+        "x": 0,
+        "y": 0,
+        "width": 250,
+        "height": 60
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-id",
+        "fromNode": "node1-id",
+        "toNode": "node2-id"
+      }
+    ]
+  }
+  ```
+</Accordion>
+
+### Creating a Canvas
+
+Ask AI in chat:
+
+```
+Create a canvas file called "Project Overview.canvas" with:
+- Central node: "Main Project"
+- 4 surrounding nodes: "Research", "Planning", "Execution", "Review"
+- Connect all to center
+```
+
+More on this in the [Canvas Creation guide](/cursor-guide/canvas-creation).
+
+## Inline Editing with Cmd+K
+
+Highlight any text in a note and press `Cmd/Ctrl + K`:
+
+**Example 1: Expand Text**
+- Highlight: "Need to research schools"
+- Press `Cmd/K`
+- Type: "Expand this into a detailed checklist"
+- AI rewrites the selection
+
+**Example 2: Reformat**
+- Highlight: Messy list of items
+- Press `Cmd/K`
+- Type: "Format as a markdown table"
+- AI converts to table
+
+**Example 3: Improve Writing**
+- Highlight: Rough draft paragraph
+- Press `Cmd/K`
+- Type: "Make this more professional"
+- AI rewrites it
+
+## Using Composer for Complex Tasks
+
+Composer (`Cmd/Ctrl + I`) is for generating entire files or making multi-file changes:
+
+<Accordion title="When to Use Composer">
+  **Use Composer when:**
+  - Creating new files from scratch
+  - Making changes across multiple files
+  - Building complex structures (like canvas files)
+  - Generating templates
+  
+  **Use Chat when:**
+  - Asking questions
+  - Analyzing existing content
+  - Getting advice
+  - Understanding your notes
+  
+  **Use Cmd+K when:**
+  - Editing specific text selections
+  - Quick rewrites
+  - Formatting changes
+  - Inline improvements
+</Accordion>
+
+## Real Examples
+
+### Example 1: Timeline from Meeting Notes
+
+**You have:** 5 meeting notes with scattered date references
+
+**Cursor chat:**
+```
+@Meetings/ Read all meeting notes and create a timeline document
+showing when each decision was made, with links back to the 
+source meeting notes. Sort chronologically.
+```
+
+**Result:** Complete timeline with clickable links
+
+### Example 2: Contact Database
+
+**You have:** Person notes scattered across folders
+
+**Cursor chat:**
+```
+Find all notes with contact information and create a 
+"Contact Directory.md" with a table showing: 
+Name, Role, Email, Phone, Link to full note
+```
+
+**Result:** Organized contact list
+
+### Example 3: Tag Cleanup
+
+**You have:** Inconsistent tags (#urgent, #Urgent, #URGENT)
+
+**Cursor chat:**
+```
+Find all variations of the "urgent" tag in my vault and 
+standardize them to #urgent (lowercase)
+```
+
+**Result:** Consistent tagging system
+
+## Terminal Commands
+
+Cursor has a built-in terminal for advanced operations:
+
+<Accordion title="Useful Terminal Commands">
+  **Open Terminal:** Press `` Cmd/Ctrl + ` ``
+  
+  **Find all notes with tag:**
+  ```bash
+  grep -r "#tagname" .
+  ```
+  
+  **Count notes:**
+  ```bash
+  find . -name "*.md" | wc -l
+  ```
+  
+  **List recently modified:**
+  ```bash
+  ls -lt **/*.md | head -10
+  ```
+  
+  <Info>
+    Ask AI to explain any terminal command you don't understand!
+  </Info>
+</Accordion>
+
+## Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Backup First" icon="shield">
+    Always have a backup before batch operations
+  </Card>
+  <Card title="Test on One File" icon="flask">
+    Try operations on a single note first
+  </Card>
+  <Card title="Review AI Output" icon="eye">
+    Check AI-generated content before committing
+  </Card>
+  <Card title="Use Specific Prompts" icon="crosshairs">
+    Be specific about what you want
+  </Card>
+  <Card title="Iterate" icon="rotate">
+    Refine AI output through conversation
+  </Card>
+  <Card title="Learn Gradually" icon="stairs">
+    Start simple, add complexity over time
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Changes not showing in Obsidian">
+    **Solution:**
+    - Obsidian auto-reloads but sometimes needs a manual refresh
+    - Close and reopen the note in Obsidian
+    - Check if the file was saved in Cursor (auto-save should handle this)
+  </Accordion>
+  
+  <Accordion title="AI can't find my notes">
+    **Solution:**
+    - Make sure vault folder is open (not just a single file)
+    - Try using @mentions to specify files/folders
+    - Check if files are actually `.md` extension
+    - Large vaults may need more specific queries
+  </Accordion>
+  
+  <Accordion title="AI breaks my links">
+    **Solution:**
+    - Be explicit: "Keep all [[wiki links]] intact"
+    - Review changes before accepting
+    - Use Obsidian's link detection to fix broken links
+  </Accordion>
+  
+  <Accordion title="Performance is slow">
+    **Solution:**
+    - Close tabs you're not using
+    - Work on specific folders instead of entire vault
+    - Consider splitting very large vaults
+    - Use faster AI models for simple tasks
+  </Accordion>
+</AccordionGroup>
+
+## Security & Privacy
+
+<Warning>
+  **What gets sent to AI:**
+  - Your prompts
+  - Files you @mention
+  - Open files in your workspace (for context)
+  
+  **What doesn't:**
+  - Your entire vault automatically
+  - Closed files (unless you mention them)
+  - Files in .gitignore (if configured)
+</Warning>
+
+### For Sensitive Information
+
+If you're working with sensitive family or legal documents:
+
+1. **Use local models** (no internet required) - Advanced setup
+2. **Use your own API keys** (more privacy control)
+3. **Be selective with @mentions** - Only share what's needed
+4. **Consider separate vaults** - Keep sensitive info separate
+
+## Next Steps
+
+<Steps>
+  <Step title="Master Prompts">
+    Learn how to write effective AI prompts
+    
+    [Go to Prompts Guide →](/cursor-guide/prompts)
+  </Step>
+  <Step title="Create Canvases">
+    Generate visual diagrams with AI
+    
+    [Go to Canvas Creation →](/cursor-guide/canvas-creation)
+  </Step>
+  <Step title="Join Workshop">
+    Get hands-on help with your specific use case
+    
+    [Go to Workshops →](/workshops/overview)
+  </Step>
+</Steps>
+
+## Quick Reference
+
+<Card title="Essential Shortcuts" icon="keyboard">
+  - `Cmd/Ctrl + L`: Open AI chat
+  - `Cmd/Ctrl + K`: Inline edit (highlight text first)
+  - `Cmd/Ctrl + I`: Composer (generate files)
+  - `Cmd/Ctrl + P`: Quick file search
+  - `` Cmd/Ctrl + ` ``: Toggle terminal
+  - `Cmd/Ctrl + B`: Toggle file explorer
+</Card>
+

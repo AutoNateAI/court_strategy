@@ -1,0 +1,477 @@
+---
+title: Civic & Family Research
+description: Use Obsidian for legal research, family planning, and community organizing
+---
+
+## Why Obsidian for Civic Research?
+
+When dealing with legal proceedings, family planning, or community issues, you need to:
+- Track complex, interconnected information
+- Organize documents and evidence
+- Build narratives and arguments
+- Remember important dates and deadlines
+- Connect facts and find patterns
+
+Obsidian excels at all of these.
+
+<Info>
+  **Privacy First:** All your research stays on your computer. No cloud company can access your sensitive family or legal information.
+</Info>
+
+## Use Case: Legal & Court Research
+
+### Setting Up a Legal Research Vault
+
+<Steps>
+  <Step title="Create Vault Structure">
+    ```
+    Legal Research Vault/
+    ├── 📥 Inbox/
+    ├── ⚖️ Case Information/
+    │   ├── Timeline/
+    │   ├── Key Facts/
+    │   └── Legal Standards/
+    ├── 📄 Documents/
+    │   ├── Court Filings/
+    │   ├── Evidence/
+    │   └── Correspondence/
+    ├── 👤 People/
+    │   ├── Witnesses/
+    │   ├── Attorneys/
+    │   └── Judges/
+    ├── 📚 Research/
+    │   ├── Case Law/
+    │   ├── Statutes/
+    │   └── Procedures/
+    ├── ✅ Tasks & Deadlines/
+    └── 📋 Templates/
+    ```
+  </Step>
+  <Step title="Create Templates">
+    Make templates for common note types (see examples below)
+  </Step>
+  <Step title="Build Your Case">
+    Start documenting everything systematically
+  </Step>
+</Steps>
+
+### Essential Templates for Legal Research
+
+**Case Timeline Template:**
+```markdown
+# Case Timeline: [[Case Name]]
+
+## Key Events
+
+- **YYYY-MM-DD**: Event description
+  - Source: [[Document Name]]
+  - Impact: How this affects the case
+
+## Next Deadline
+- **YYYY-MM-DD**: Description
+- Status: [ ] Not started / [ ] In progress / [x] Complete
+
+---
+**Tags:** #timeline #case #important
+```
+
+**Person Profile Template:**
+```markdown
+# [[Person Name]]
+
+## Basic Information
+- **Role:** Witness / Attorney / Judge / Other
+- **Contact:** 
+- **Relationship:** 
+
+## Key Facts
+- Relevant information about this person
+- Their perspective or testimony
+
+## Linked Documents
+- [[Document 1]]
+- [[Document 2]]
+
+## Notes from Interactions
+### YYYY-MM-DD
+- Notes from conversation
+
+---
+**Tags:** #person #witness
+```
+
+**Document Summary Template:**
+```markdown
+# [[Document Title]]
+
+## Metadata
+- **Date:** YYYY-MM-DD
+- **Type:** Court filing / Evidence / Correspondence
+- **Source:** 
+- **Related to:** [[Case Name]]
+
+## Summary
+Brief overview of document contents
+
+## Key Points
+- Important point 1
+- Important point 2
+- Important point 3
+
+## Connections
+- Related to [[Other Document]]
+- Supports [[Key Fact]]
+- Contradicts [[Opposing Claim]]
+
+---
+**Tags:** #document #evidence
+```
+
+### Building Your Case Narrative
+
+<Accordion title="How to connect your research">
+  **Use bidirectional links:**
+  ```markdown
+  The custody agreement [[2020-Custody-Agreement]] shows that
+  visitation was agreed upon. However, [[Text-Messages-2023]]
+  demonstrate that access was denied. This is relevant to
+  [[Key-Legal-Standard-Parental-Rights]].
+  ```
+  
+  **Use tags for organization:**
+  - `#evidence-strong` vs `#evidence-weak`
+  - `#deadline-urgent`
+  - `#question-for-attorney`
+  - `#favorable` vs `#unfavorable`
+  
+  **Use Dataview to track:**
+  ```dataview
+  TABLE deadline, status
+  FROM #case
+  WHERE status != "complete"
+  SORT deadline ASC
+  ```
+</Accordion>
+
+### Preparing for Court
+
+<CardGroup cols={2}>
+  <Card title="Timeline Visualization" icon="timeline">
+    Use Canvas or Excalidraw to create visual timelines of events
+  </Card>
+  <Card title="Argument Structure" icon="list">
+    Use Canvas to map out your arguments and supporting evidence
+  </Card>
+  <Card title="Question Prep" icon="question">
+    Create notes for questions to ask and anticipate
+  </Card>
+  <Card title="Document Quick Access" icon="folder">
+    Tag everything for instant search during prep
+  </Card>
+</CardGroup>
+
+## Use Case: Family Planning & Documentation
+
+### Family Documentation Vault Structure
+
+```
+Family Vault/
+├── 👨‍👩‍👧‍👦 Family Members/
+│   └── [Name]/
+│       ├── Medical/
+│       ├── Education/
+│       └── Milestones/
+├── 🏥 Health/
+│   ├── Medical Records/
+│   ├── Insurance/
+│   └── Providers/
+├── 🎓 Education/
+│   ├── Schools/
+│   ├── Applications/
+│   └── Progress/
+├── 💰 Financial/
+├── 📅 Events & Milestones/
+└── 📋 Templates/
+```
+
+### Family Member Template
+
+```markdown
+# [[Family Member Name]]
+
+## Basic Info
+- **Birthday:** YYYY-MM-DD
+- **Age:** 
+- **Relation:** 
+
+## Medical Information
+- [[Doctor Name]] - Primary Care
+- [[Allergies]]
+- [[Medications]]
+- [[Medical History]]
+
+## Education
+- **Current School:** [[School Name]]
+- **Grade:** 
+- **Teachers:** [[Teacher Name]]
+
+## Important Dates
+- [ ] Annual checkup: YYYY-MM-DD
+- [ ] School registration: YYYY-MM-DD
+
+## Notes
+Daily observations, milestones, concerns
+
+---
+**Tags:** #family #member
+```
+
+### School Research Template
+
+```markdown
+# [[School Name]]
+
+## Basic Information
+- **Type:** Public / Private / Charter
+- **Grades:** 
+- **Location:** 
+- **Website:** 
+
+## Key Details
+- **Enrollment deadline:** 
+- **Tuition:** 
+- **Class size:** 
+- **Special programs:** 
+
+## Pros and Cons
+### Pros
+- 
+
+### Cons
+- 
+
+## Visit Notes
+### YYYY-MM-DD
+- Impressions from school visit
+
+## Connections
+- Compared to [[Other School]]
+- Recommended by [[Person]]
+
+---
+**Tags:** #education #school #research
+```
+
+## Use Case: Community Organizing
+
+### Community Organization Vault
+
+```
+Community Vault/
+├── 🏛️ Issues/
+│   └── [Issue Name]/
+│       ├── Research/
+│       ├── Action Plans/
+│       └── Progress/
+├── 👥 Contacts/
+│   ├── Community Members/
+│   ├── Officials/
+│   └── Organizations/
+├── 📅 Meetings/
+├── 📢 Campaigns/
+└── 📋 Templates/
+```
+
+### Issue Tracking Template
+
+```markdown
+# [[Issue Name]]
+
+## Overview
+Brief description of the community issue
+
+## Status
+- **Current Status:** Research / Planning / Action / Resolved
+- **Priority:** High / Medium / Low
+- **Next Action:** 
+
+## Stakeholders
+### Supporters
+- [[Supporter 1]]
+
+### Opposition
+- [[Opposition 1]]
+
+### Decision Makers
+- [[Official 1]]
+
+## Research
+- [[Research Document 1]]
+- [[Data Source 1]]
+
+## Action Plan
+- [ ] Task 1
+- [ ] Task 2
+
+## Timeline
+### Key Dates
+- **YYYY-MM-DD:** Event description
+
+## Resources Needed
+- 
+
+---
+**Tags:** #issue #community #active
+```
+
+### Meeting Notes Template
+
+```markdown
+# Meeting: [[Meeting Name]]
+
+## Metadata
+- **Date:** YYYY-MM-DD
+- **Time:** HH:MM
+- **Location:** 
+- **Attendees:** [[Person 1]], [[Person 2]]
+
+## Agenda
+1. Topic 1
+2. Topic 2
+
+## Notes
+### Topic 1
+- Discussion points
+
+### Topic 2
+- Discussion points
+
+## Decisions Made
+- 
+
+## Action Items
+- [ ] Task - assigned to [[Person]] - due YYYY-MM-DD
+
+## Next Meeting
+- **Date:** YYYY-MM-DD
+- **Topics:** 
+
+---
+**Tags:** #meeting #community
+```
+
+## Power Workflows
+
+### Daily Research Workflow
+
+<Steps>
+  <Step title="Morning Review">
+    Open daily note, review tasks and deadlines
+  </Step>
+  <Step title="Capture Information">
+    Add new information to Inbox as you find it
+  </Step>
+  <Step title="Process Inbox">
+    Evening: move Inbox items to proper locations, create links
+  </Step>
+  <Step title="Update Timeline">
+    Add new events to timeline, connect to sources
+  </Step>
+</Steps>
+
+### Weekly Planning Workflow
+
+<Steps>
+  <Step title="Review Progress">
+    Use Dataview to see completed vs pending tasks
+  </Step>
+  <Step title="Check Deadlines">
+    Calendar view of upcoming dates
+  </Step>
+  <Step title="Plan Next Week">
+    Create tasks and assign dates
+  </Step>
+  <Step title="Update Stakeholders">
+    Review person notes, plan communications
+  </Step>
+</Steps>
+
+### Search & Discovery
+
+<Tip>
+  **Pro search techniques:**
+  - `tag:#evidence`: Find all evidence
+  - `file:custody`: Find files with "custody"
+  - `line:deadline`: Find lines mentioning deadlines
+  - `path:Documents/`: Search specific folder
+</Tip>
+
+## Advanced: Using Canvas for Visual Planning
+
+Canvas is perfect for:
+- **Case Strategy:** Arrange arguments, evidence, and counterarguments visually
+- **Family Planning:** Map out decision trees for school choices, etc.
+- **Campaign Planning:** Visualize campaign strategy and tactics
+
+<Accordion title="How to use Canvas">
+  1. Create new note, add `.canvas` extension
+  2. Drag notes, images, or PDFs onto canvas
+  3. Connect items with arrows
+  4. Color-code by category
+  5. Export as image for presentations
+</Accordion>
+
+## Privacy & Security
+
+<Warning>
+  **Important security considerations:**
+  - Enable encryption if syncing via cloud
+  - Consider vault on encrypted drive for sensitive cases
+  - Don't share vault with unauthorized people
+  - Back up regularly but securely
+  - Be careful with screenshots containing sensitive info
+</Warning>
+
+### Encryption Options
+
+1. **File system encryption:** Use FileVault (Mac) or BitLocker (Windows)
+2. **Encrypted folders:** Use VeraCrypt for vault folder
+3. **Obsidian Sync:** Built-in end-to-end encryption
+
+## Integration with Cursor
+
+<Card title="Next: Use AI to Enhance Research" icon="robot" href="/cursor-guide/obsidian-integration">
+  Learn how to use Cursor AI to help with your Obsidian research
+</Card>
+
+## Real Success Stories
+
+<Note>
+  These are placeholder examples. Once you have real testimonials, add them here.
+</Note>
+
+> "Using Obsidian to organize my custody case research gave me confidence in court. I could reference everything instantly."
+> 
+> — Family case participant
+
+> "Tracking community issues in Obsidian helped our coalition stay organized and win our campaign."
+> 
+> — Community organizer
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="Learn Cursor AI" icon="forward" href="/cursor-guide/introduction">
+    Enhance your research with AI tools
+  </Card>
+  <Card title="Join Workshops" icon="users" href="/workshops/overview">
+    Get hands-on help with your specific use case
+  </Card>
+  <Card title="See Stories" icon="book" href="/resources/stories">
+    Read more detailed case studies
+  </Card>
+  <Card title="Get Templates" icon="file-lines" href="/resources/tools">
+    Download ready-to-use templates
+  </Card>
+</CardGroup>
+

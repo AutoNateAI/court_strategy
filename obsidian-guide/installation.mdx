@@ -1,0 +1,224 @@
+---
+title: Installing Obsidian
+description: Step-by-step installation guide for all platforms
+---
+
+## Download Obsidian
+
+Obsidian is available for Windows, macOS, Linux, iOS, and Android. Best of all, it's **free for personal use**.
+
+<CardGroup cols={3}>
+  <Card title="Windows" icon="windows" href="https://obsidian.md/download">
+    Download for Windows
+  </Card>
+  <Card title="macOS" icon="apple" href="https://obsidian.md/download">
+    Download for macOS
+  </Card>
+  <Card title="Linux" icon="linux" href="https://obsidian.md/download">
+    Download for Linux
+  </Card>
+</CardGroup>
+
+## Installation Instructions
+
+<Tabs>
+  <Tab title="macOS">
+    ### macOS Installation
+    
+    <Steps>
+      <Step title="Download">
+        Download the `.dmg` file from [obsidian.md](https://obsidian.md/download)
+      </Step>
+      <Step title="Open the DMG">
+        Double-click the downloaded file to open it
+      </Step>
+      <Step title="Drag to Applications">
+        Drag the Obsidian icon to your Applications folder
+      </Step>
+      <Step title="Launch Obsidian">
+        Open Obsidian from your Applications folder or Spotlight
+      </Step>
+      <Step title="Security Permission">
+        If macOS blocks the app, go to System Preferences > Security & Privacy and click "Open Anyway"
+      </Step>
+    </Steps>
+    
+    <Warning>
+      **First launch on macOS:** You may see a security warning. Click "Open" to proceed.
+    </Warning>
+  </Tab>
+  
+  <Tab title="Windows">
+    ### Windows Installation
+    
+    <Steps>
+      <Step title="Download">
+        Download the `.exe` installer from [obsidian.md](https://obsidian.md/download)
+      </Step>
+      <Step title="Run Installer">
+        Double-click the downloaded file to run the installer
+      </Step>
+      <Step title="Follow Wizard">
+        Follow the installation wizard prompts
+      </Step>
+      <Step title="Launch">
+        Obsidian will launch automatically, or find it in your Start Menu
+      </Step>
+    </Steps>
+    
+    <Tip>
+      **Tip:** Pin Obsidian to your taskbar for quick access
+    </Tip>
+  </Tab>
+  
+  <Tab title="Linux">
+    ### Linux Installation
+    
+    <Steps>
+      <Step title="Choose Your Format">
+        Download `.AppImage`, `.deb`, or `.snap` based on your distribution
+      </Step>
+      <Step title="AppImage">
+        Make executable: `chmod +x Obsidian-*.AppImage`
+        
+        Run: `./Obsidian-*.AppImage`
+      </Step>
+      <Step title="Debian/Ubuntu (.deb)">
+        Install: `sudo dpkg -i obsidian_*.deb`
+        
+        Fix dependencies: `sudo apt-get install -f`
+      </Step>
+      <Step title="Snap">
+        Install: `sudo snap install obsidian --classic`
+      </Step>
+    </Steps>
+  </Tab>
+  
+  <Tab title="Mobile">
+    ### Mobile Installation
+    
+    <CardGroup cols={2}>
+      <Card title="iOS" icon="app-store">
+        Download from the App Store
+        
+        Search for "Obsidian - Connected Notes"
+      </Card>
+      <Card title="Android" icon="google-play">
+        Download from Google Play
+        
+        Search for "Obsidian"
+      </Card>
+    </CardGroup>
+    
+    <Info>
+      **Syncing:** To sync your vault between devices, see our guide on [vault setup](/obsidian-guide/vault-setup#syncing).
+    </Info>
+  </Tab>
+</Tabs>
+
+## First Launch
+
+When you first open Obsidian, you'll see a welcome screen:
+
+<Steps>
+  <Step title="Create or Open Vault">
+    You can either:
+    - **Create new vault:** Start fresh
+    - **Open folder as vault:** Use an existing folder
+    - **Open vault from Obsidian Sync:** If you have sync set up
+  </Step>
+  <Step title="Choose Location">
+    Pick where your vault will be stored on your computer
+    
+    <Tip>
+      Choose a location that's backed up (like your Documents folder or a cloud-synced folder)
+    </Tip>
+  </Step>
+  <Step title="Name Your Vault">
+    Give your vault a meaningful name (e.g., "Personal Knowledge Base", "Research Vault", "Family Docs")
+  </Step>
+</Steps>
+
+## System Requirements
+
+<Tabs>
+  <Tab title="Desktop">
+    **Minimum Requirements:**
+    - **OS:** Windows 10, macOS 10.13, or modern Linux
+    - **RAM:** 2GB (4GB+ recommended)
+    - **Storage:** 100MB for app, plus space for your notes
+    - **Display:** 1280x720 or higher
+  </Tab>
+  <Tab title="Mobile">
+    **Minimum Requirements:**
+    - **iOS:** iOS 13 or later
+    - **Android:** Android 7.0 or later
+    - **Storage:** 50MB for app, plus space for your notes
+  </Tab>
+</Tabs>
+
+## Verifying Installation
+
+Let's make sure everything is working:
+
+<Checklist>
+  - [ ] Obsidian launches without errors
+  - [ ] You can create a new vault
+  - [ ] You can create a new note
+  - [ ] You can see the file explorer on the left
+  - [ ] You can switch between edit and preview modes
+</Checklist>
+
+<Warning>
+  **Having issues?** Check the [Obsidian Help](https://help.obsidian.md) or ask in our [community forum](/resources/community).
+</Warning>
+
+## Recommended Settings
+
+After installation, we recommend adjusting these settings:
+
+1. **Editor → Auto-pair brackets:** Enable for easier link creation
+2. **Editor → Vim key bindings:** Disable (unless you know what this is)
+3. **Files & Links → Default location for new notes:** Choose a folder
+4. **Appearance → Theme:** Try different themes to find what you like
+
+<Tip>
+  Access settings by clicking the gear icon ⚙️ in the bottom left corner
+</Tip>
+
+## Next Steps
+
+<Steps>
+  <Step title="Set Up Your Vault">
+    Learn how to organize your vault effectively
+    
+    [Go to Vault Setup →](/obsidian-guide/vault-setup)
+  </Step>
+  <Step title="Install Essential Plugins">
+    Enhance Obsidian with powerful community plugins
+    
+    [Go to Plugins Guide →](/obsidian-guide/plugins)
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Obsidian won't open on macOS">
+    **Solution:** Go to System Preferences > Security & Privacy > General, and click "Open Anyway" next to the Obsidian warning.
+  </Accordion>
+  <Accordion title="Can't find my vault">
+    **Solution:** Vaults are just folders. Look for the folder name you created during setup. Default location is usually in your Documents folder.
+  </Accordion>
+  <Accordion title="Slow performance">
+    **Solution:** Large vaults (10,000+ notes) may be slower. Consider splitting into multiple vaults or disabling resource-intensive plugins.
+  </Accordion>
+  <Accordion title="Mobile app won't sync">
+    **Solution:** Make sure you're using the same sync method (Obsidian Sync, iCloud, etc.) on all devices and that the vault folder is in the right location.
+  </Accordion>
+</AccordionGroup>
+
+<Card title="Need More Help?" icon="question" href="/resources/faq">
+  Check our FAQ or ask in the community forum
+</Card>
+

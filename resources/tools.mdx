@@ -1,0 +1,618 @@
+---
+title: Tools & Resources
+description: Essential downloads, templates, and resources for your AI-powered workflow
+---
+
+## Essential Software
+
+### Core Tools
+
+<CardGroup cols={2}>
+  <Card title="Obsidian" icon="book-open" href="https://obsidian.md">
+    **Free knowledge management app**
+    
+    - Windows, Mac, Linux, iOS, Android
+    - Free for personal use
+    - [Installation Guide →](/obsidian-guide/installation)
+  </Card>
+  
+  <Card title="Cursor" icon="code" href="https://cursor.sh">
+    **AI-powered code editor**
+    
+    - Windows, Mac, Linux
+    - Free tier available
+    - Pro: $20/month
+    - [Installation Guide →](/cursor-guide/installation)
+  </Card>
+</CardGroup>
+
+### Optional Enhancements
+
+<Accordion title="Obsidian Sync">
+  **Official sync service by Obsidian**
+  
+  - $10/month
+  - End-to-end encrypted
+  - Sync across all devices
+  - Version history
+  - Best for: Non-technical users wanting reliable sync
+  
+  **Alternative:** Use iCloud, Dropbox, or Google Drive (free but more setup)
+</Accordion>
+
+<Accordion title="Obsidian Publish">
+  **Publish your notes as a website**
+  
+  - $8/month per site
+  - Custom domain support
+  - Password protection
+  - Best for: Sharing research publicly or with team
+</Accordion>
+
+## Templates
+
+### Obsidian Templates
+
+Download these ready-to-use templates for your vault:
+
+<Tabs>
+  <Tab title="Family">
+    ### Family Organization Templates
+    
+    **Family Member Profile**
+    ```markdown
+    ---
+    name: 
+    birthday: 
+    tags: [family, member]
+    ---
+    
+    # [[Name]]
+    
+    ## Basic Info
+    - Birthday: 
+    - Age:
+    - Contact:
+    
+    ## Health
+    - Primary Care: [[Doctor]]
+    - Allergies:
+    - Medications:
+    - Conditions:
+    
+    ## Education
+    - School: [[School Name]]
+    - Grade:
+    - Teachers: [[Teacher]]
+    
+    ## Important Dates
+    - [ ] Next checkup: DATE
+    - [ ] School event: DATE
+    
+    ## Notes
+    
+    ```
+    
+    **School Visit Template**
+    ```markdown
+    ---
+    school:
+    date:
+    tags: [education, school, visit]
+    status: needs-decision
+    ---
+    
+    # School Visit: [[School Name]]
+    
+    Date: 
+    Toured by: [[Person]]
+    
+    ## First Impressions
+    
+    ## Facilities
+    - Classrooms:
+    - Playground:
+    - Library:
+    - Other:
+    
+    ## Staff Met
+    - [[Teacher/Admin Name]]
+    
+    ## Academic Programs
+    
+    ## Extracurriculars
+    
+    ## Pros
+    - 
+    
+    ## Cons
+    - 
+    
+    ## Cost
+    - Tuition:
+    - Fees:
+    - Total:
+    
+    ## Next Steps
+    - [ ] 
+    
+    ## Overall Rating
+    /10
+    
+    ## Related
+    - Compare with [[Other School]]
+    ```
+  </Tab>
+  
+  <Tab title="Legal">
+    ### Legal Research Templates
+    
+    **Case Timeline Entry**
+    ```markdown
+    ---
+    date:
+    event:
+    tags: [case, timeline, evidence]
+    ---
+    
+    # Event: [[Event Name]]
+    
+    **Date:** 
+    **Type:** Meeting / Filing / Incident / Communication
+    
+    ## What Happened
+    
+    ## Source
+    - [[Document or Note]]
+    - Physical evidence: 
+    
+    ## Significance
+    Why this matters for the case:
+    
+    ## Witnesses
+    - [[Person 1]]
+    - [[Person 2]]
+    
+    ## Related Events
+    - [[Previous Event]]
+    - [[Next Event]]
+    
+    ## Status
+    - [ ] Documented
+    - [ ] Evidence gathered
+    - [ ] Verified
+    ```
+    
+    **Person Profile (Legal)**
+    ```markdown
+    ---
+    name:
+    role:
+    tags: [case, person]
+    ---
+    
+    # [[Person Name]]
+    
+    ## Role
+    Witness / Attorney / Judge / Party / Other
+    
+    ## Contact
+    - Phone:
+    - Email:
+    - Address:
+    
+    ## Relationship to Case
+    
+    ## Key Facts
+    - What they know:
+    - Their perspective:
+    - Credibility notes:
+    
+    ## Interactions
+    ### DATE
+    - Notes:
+    
+    ## Documents
+    - [[Related Doc 1]]
+    - [[Related Doc 2]]
+    
+    ## Strategy Notes
+    ```
+  </Tab>
+  
+  <Tab title="Research">
+    ### Research Templates
+    
+    **Literature Note**
+    ```markdown
+    ---
+    title:
+    author:
+    year:
+    tags: [literature, research]
+    status: reading / read / cited
+    ---
+    
+    # [[Author Year - Title]]
+    
+    ## Metadata
+    - **Authors:** 
+    - **Year:** 
+    - **Journal/Publisher:** 
+    - **DOI/URL:** 
+    - **Date Read:** 
+    
+    ## Summary
+    Brief overview in 3-5 sentences
+    
+    ## Key Arguments
+    1.
+    2.
+    3.
+    
+    ## Evidence & Methods
+    
+    ## Important Quotes
+    > "Quote" (p. X)
+    
+    ## My Thoughts
+    
+    ## Related To
+    - [[Related Paper 1]]
+    - [[Concept 1]]
+    - [[My Project]]
+    
+    ## Citation
+    ```
+    Full citation in required format
+    ```
+    ```
+    
+    **Daily Research Note**
+    ```markdown
+    ---
+    date: {{date}}
+    tags: [daily, research]
+    ---
+    
+    # {{date}}
+    
+    ## Research Goals Today
+    - [ ] 
+    - [ ] 
+    - [ ] 
+    
+    ## Papers Read
+    - [[Paper 1]]
+    
+    ## Ideas & Insights
+    - 
+    
+    ## Questions Raised
+    - 
+    
+    ## Tomorrow's Focus
+    - 
+    
+    ## Links
+    - Related to [[Project]]
+    ```
+  </Tab>
+  
+  <Tab title="General">
+    ### General Templates
+    
+    **Daily Note**
+    ```markdown
+    ---
+    date: {{date}}
+    tags: [daily]
+    ---
+    
+    # {{date}}
+    
+    ## 🌤️ How I'm Feeling
+    
+    ## ✅ Top 3 Priorities
+    1. [ ] 
+    2. [ ] 
+    3. [ ] 
+    
+    ## 📝 Notes
+    
+    ## 💡 Ideas
+    
+    ## 🙏 Gratitude
+    - 
+    - 
+    - 
+    
+    ## 🔗 Links
+    - [[Related Note]]
+    ```
+    
+    **Meeting Notes**
+    ```markdown
+    ---
+    meeting:
+    date:
+    attendees:
+    tags: [meeting]
+    ---
+    
+    # Meeting: [[Meeting Name]]
+    
+    **Date:** 
+    **Time:** 
+    **Location:** 
+    **Attendees:** [[Person 1]], [[Person 2]]
+    
+    ## Agenda
+    1.
+    2.
+    
+    ## Discussion Notes
+    ### Topic 1
+    
+    ### Topic 2
+    
+    ## Decisions Made
+    - 
+    
+    ## Action Items
+    - [ ] Task for [[Person]] by DATE
+    - [ ] Task for [[Person]] by DATE
+    
+    ## Next Steps
+    - [ ] Schedule follow-up
+    - [ ] Send summary
+    
+    ## Next Meeting
+    **Date:** 
+    **Topics:** 
+    ```
+  </Tab>
+</Tabs>
+
+<Card title="Download Template Pack" icon="download">
+  **Coming Soon:** Complete template pack as downloadable vault
+  
+  For now, copy templates above into your vault's Templates folder
+</Card>
+
+## Cursor Prompts Library
+
+### Ready-to-Use Prompts
+
+Save these prompts for common tasks:
+
+<AccordionGroup>
+  <Accordion title="Timeline Generation">
+    ```
+    @[folder]/ Read all notes in this folder and create a timeline document.
+    
+    Format:
+    # Timeline
+    
+    ## YYYY-MM-DD - Event
+    **What happened:** Description
+    **Source:** [[Note]]
+    
+    Sort chronologically, earliest first.
+    ```
+  </Accordion>
+  
+  <Accordion title="Comparison Table">
+    ```
+    Create a comparison table from these notes:
+    @note1.md
+    @note2.md
+    @note3.md
+    
+    Include columns: Name, [criteria1], [criteria2], [criteria3], Pros, Cons
+    Format as markdown table
+    ```
+  </Accordion>
+  
+  <Accordion title="Index Creation">
+    ```
+    @[folder]/ Create an index note called "[Name]-Index.md"
+    
+    List all notes in this folder organized by:
+    - Topic/category
+    - With brief description
+    - Link to each note
+    
+    Format as nested bullet list
+    ```
+  </Accordion>
+  
+  <Accordion title="Summary Generation">
+    ```
+    @[file].md Create a summary of this note that:
+    - Captures 5 main points
+    - Is 1 paragraph
+    - Uses professional tone
+    - Includes links to any mentioned notes
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Plugin Recommendations
+
+### Essential Obsidian Plugins
+
+<Tabs>
+  <Tab title="Must Have">
+    **Core Plugins (Built-in):**
+    - Daily notes
+    - Templates
+    - Backlinks
+    - Graph view
+    - Tag pane
+    
+    **Community Plugins:**
+    - **Dataview** - Query your notes like a database
+    - **Calendar** - Visual date navigation
+    - **Kanban** - Project boards
+  </Tab>
+  
+  <Tab title="Power Users">
+    - **Templater** - Advanced template functionality
+    - **Excalidraw** - Drawing and diagrams
+    - **Tasks** - Advanced task management
+    - **Periodic Notes** - Weekly/monthly notes
+    - **QuickAdd** - Rapid note capture
+  </Tab>
+  
+  <Tab title="Researchers">
+    - **Citations** - Bibliography management
+    - **PDF++** - Better PDF annotation
+    - **Extract Highlights** - Import from Kindle/Readwise
+    - **Note Refactor** - Split and merge notes
+    - **Zotero Integration** - Connect with Zotero
+  </Tab>
+</Tabs>
+
+[Learn more about plugins →](/obsidian-guide/plugins)
+
+## Learning Resources
+
+### Official Documentation
+
+<CardGroup cols={2}>
+  <Card title="Obsidian Help" icon="book" href="https://help.obsidian.md">
+    Official Obsidian documentation
+  </Card>
+  <Card title="Cursor Docs" icon="file" href="https://cursor.sh/docs">
+    Cursor documentation and guides
+  </Card>
+</CardGroup>
+
+### Video Tutorials
+
+<Info>
+  **Coming Soon:** Video tutorial series on our YouTube channel
+  
+  Subscribe to get notified: [YouTube link coming]
+</Info>
+
+### Community Resources
+
+<CardGroup cols={2}>
+  <Card title="Our Community" icon="users" href="/resources/community">
+    Join our forums and discussions
+  </Card>
+  <Card title="Success Stories" icon="star" href="/resources/stories">
+    Learn from others' experiences
+  </Card>
+</CardGroup>
+
+## Cheat Sheets
+
+### Markdown Quick Reference
+
+```markdown
+# Heading 1
+## Heading 2
+### Heading 3
+
+**Bold text**
+*Italic text*
+==Highlighted text==
+~~Strikethrough~~
+
+- Bullet point
+  - Nested bullet
+1. Numbered list
+2. Second item
+
+[External link](https://example.com)
+[[Internal link]]
+[[Link|Display Text]]
+
+![[Embedded note]]
+![[image.png]]
+
+#tag
+#multi-word-tag
+
+- [ ] Task
+- [x] Completed task
+
+> Quote
+
+`Inline code`
+
+```
+code block
+```
+
+| Table | Header |
+| ----- | ------ |
+| Cell  | Cell   |
+```
+
+### Cursor Shortcuts
+
+<CardGroup cols={3}>
+  <Card title="Chat">
+    `Cmd/Ctrl + L`
+    
+    Open AI chat
+  </Card>
+  <Card title="Inline Edit">
+    `Cmd/Ctrl + K`
+    
+    Edit selection
+  </Card>
+  <Card title="Composer">
+    `Cmd/Ctrl + I`
+    
+    Generate files
+  </Card>
+  <Card title="Search">
+    `Cmd/Ctrl + P`
+    
+    Quick file open
+  </Card>
+  <Card title="Terminal">
+    `` Cmd/Ctrl + ` ``
+    
+    Toggle terminal
+  </Card>
+  <Card title="Command">
+    `Cmd/Ctrl + Shift + P`
+    
+    Command palette
+  </Card>
+</CardGroup>
+
+## Support
+
+Need help?
+
+<CardGroup cols={3}>
+  <Card title="FAQ" icon="circle-question" href="/resources/faq">
+    Common questions answered
+  </Card>
+  <Card title="Community" icon="users" href="/resources/community">
+    Ask the community
+  </Card>
+  <Card title="Workshops" icon="graduation-cap" href="/workshops/overview">
+    Get hands-on help
+  </Card>
+</CardGroup>
+
+## Stay Updated
+
+<Card title="Newsletter" icon="envelope">
+  **Coming Soon:** Subscribe for:
+  - New template releases
+  - Tutorial updates
+  - Workshop announcements
+  - Community highlights
+  
+  Email: subscribe@autonateai.com
+</Card>
+

@@ -1,0 +1,106 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Autonate AI",
+  "logo": {
+    "dark": "/public/images/logo-dark.svg",
+    "light": "/public/images/logo-light.svg"
+  },
+  "favicon": "/public/images/favicon.png",
+  "colors": {
+    "primary": "#6366F1",
+    "light": "#818CF8",
+    "dark": "#4F46E5",
+    "anchors": {
+      "from": "#6366F1",
+      "to": "#818CF8"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Community",
+      "url": "https://github.com/autonateai"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Join Workshop",
+    "url": "/workshops/overview"
+  },
+  "tabs": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Workshops",
+      "url": "/workshops"
+    },
+    {
+      "name": "Obsidian Guide",
+      "url": "/obsidian-guide"
+    },
+    {
+      "name": "Cursor Guide",
+      "url": "/cursor-guide"
+    },
+    {
+      "name": "Resources",
+      "url": "/resources"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "home"
+      ]
+    },
+    {
+      "group": "Workshops",
+      "pages": [
+        "workshops/overview",
+        "workshops/getting-started",
+        "workshops/live-sessions"
+      ]
+    },
+    {
+      "group": "Obsidian Guide",
+      "pages": [
+        "obsidian-guide/introduction",
+        "obsidian-guide/installation",
+        "obsidian-guide/vault-setup",
+        "obsidian-guide/plugins",
+        "obsidian-guide/civic-research"
+      ]
+    },
+    {
+      "group": "Cursor Guide",
+      "pages": [
+        "cursor-guide/introduction",
+        "cursor-guide/installation",
+        "cursor-guide/obsidian-integration",
+        "cursor-guide/prompts",
+        "cursor-guide/canvas-creation"
+      ]
+    },
+    {
+      "group": "Resources",
+      "pages": [
+        "resources/stories",
+        "resources/tools",
+        "resources/community",
+        "resources/faq"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "twitter": "https://twitter.com/autonateai",
+    "github": "https://github.com/autonateai",
+    "linkedin": "https://www.linkedin.com/company/autonateai"
+  },
+  "analytics": {
+    "ga4": {
+      "measurementId": "G-XXXXXXXXXX"
+    }
+  }
+}
+

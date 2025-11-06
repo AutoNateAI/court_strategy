@@ -1,0 +1,308 @@
+---
+title: Vault Setup
+description: Organize your Obsidian vault for maximum effectiveness
+---
+
+## Understanding Vaults
+
+A **vault** in Obsidian is simply a folder on your computer containing all your notes (`.md` files) and configuration. Think of it as your personal knowledge base.
+
+<Info>
+  **Key Insight:** Because vaults are just folders, you can back them up, sync them, or share them like any other files on your computer.
+</Info>
+
+## Creating Your First Vault
+
+<Steps>
+  <Step title="Open Obsidian">
+    Launch Obsidian from your applications
+  </Step>
+  <Step title="Create New Vault">
+    Click "Create new vault" on the start screen
+  </Step>
+  <Step title="Name Your Vault">
+    Choose a descriptive name:
+    - "Personal Knowledge Base"
+    - "Family Research"
+    - "Project Documentation"
+    - "Legal Case Prep"
+  </Step>
+  <Step title="Choose Location">
+    Select where to store your vault (we recommend your Documents folder)
+  </Step>
+</Steps>
+
+## Vault Organization Strategies
+
+### Basic Folder Structure
+
+Here's a recommended starting structure:
+
+```
+My Vault/
+├── 📥 Inbox/              # Capture quick thoughts
+├── 📓 Daily Notes/        # Daily journal entries
+├── 📚 Resources/          # Reference materials
+├── 📁 Projects/           # Active projects
+├── 📋 Templates/          # Note templates
+└── 🗃️ Archive/           # Completed items
+```
+
+<Tabs>
+  <Tab title="For Families">
+    ### Family Vault Structure
+    
+    ```
+    Family Vault/
+    ├── 📥 Inbox/
+    ├── 👨‍👩‍👧‍👦 Family Members/
+    ├── 🏥 Health/
+    │   ├── Medical Records/
+    │   └── Insurance/
+    ├── 🎓 Education/
+    │   ├── School Info/
+    │   └── Applications/
+    ├── ⚖️ Legal/
+    │   ├── Court Documents/
+    │   └── Research/
+    ├── 💰 Finances/
+    └── 📋 Templates/
+    ```
+  </Tab>
+  
+  <Tab title="For Research">
+    ### Research Vault Structure
+    
+    ```
+    Research Vault/
+    ├── 📥 Inbox/
+    ├── 📚 Literature/
+    │   ├── Papers/
+    │   └── Books/
+    ├── 💡 Ideas/
+    ├── 📊 Data/
+    ├── ✍️ Writing/
+    ├── 🗂️ Topics/
+    └── 📋 Templates/
+    ```
+  </Tab>
+  
+  <Tab title="For Communities">
+    ### Community Organizing Vault
+    
+    ```
+    Community Vault/
+    ├── 📥 Inbox/
+    ├── 🏛️ Civic Issues/
+    ├── 👥 Contacts/
+    ├── 📅 Meetings/
+    ├── 📢 Campaigns/
+    ├── 📊 Research/
+    └── 📋 Templates/
+    ```
+  </Tab>
+</Tabs>
+
+## Creating Your Folder Structure
+
+<Steps>
+  <Step title="Open File Explorer">
+    In Obsidian, look at the left sidebar - this is your file explorer
+  </Step>
+  <Step title="Create Folders">
+    Right-click in the file explorer and select "New folder"
+    
+    Create the folders from your chosen structure above
+  </Step>
+  <Step title="Create Your First Note">
+    Right-click on a folder and select "New note"
+    
+    Or use the keyboard shortcut: `Cmd/Ctrl + N`
+  </Step>
+</Steps>
+
+## Essential Settings
+
+Access settings by clicking the gear icon ⚙️ in the bottom left.
+
+### Files & Links
+
+<Accordion title="Configure File Settings">
+  **Deleted files:**
+  - Move to Obsidian trash (`.trash` folder) ✅ Recommended
+  
+  **Default location for new notes:**
+  - In the folder specified below → Choose "Inbox"
+  
+  **New link format:**
+  - Shortest path when possible ✅ Recommended
+  
+  **Attachments folder path:**
+  - Create "Attachments" folder at vault root
+</Accordion>
+
+### Editor
+
+<Accordion title="Configure Editor Settings">
+  **Readable line length:**
+  - Enable for comfortable reading ✅
+  
+  **Strict line breaks:**
+  - Enable to prevent accidental line joining ✅
+  
+  **Auto pair brackets:**
+  - Enable for easier link creation ✅
+  
+  **Spell check:**
+  - Enable ✅
+</Accordion>
+
+### Appearance
+
+<Accordion title="Customize Appearance">
+  Try different themes:
+  - **Light mode:** Minimal, Things, California Coast
+  - **Dark mode:** Obsidian, Dracula, Nord
+  
+  **Font:**
+  - Adjust to your preference
+  - Recommended: 16-18px for comfortable reading
+</Accordion>
+
+## Vault Management Tips
+
+### Naming Conventions
+
+<Tip>
+  **File naming best practices:**
+  - Use descriptive names: "Meeting Notes 2024-01-15" not "notes1"
+  - Use consistent date formats: YYYY-MM-DD
+  - Avoid special characters: / \ : * ? " < > |
+  - Use spaces or hyphens, be consistent
+</Tip>
+
+### Tags vs Folders
+
+<Tabs>
+  <Tab title="Folders">
+    **Use folders for:**
+    - High-level organization
+    - Grouping related content
+    - Projects or topics
+    
+    Example: `/Projects/Website/` contains all website-related notes
+  </Tab>
+  <Tab title="Tags">
+    **Use tags for:**
+    - Cross-cutting themes
+    - Status indicators
+    - Quick filtering
+    
+    Example: `#urgent`, `#research`, `#actionable`
+  </Tab>
+</Tabs>
+
+<Info>
+  **Pro Tip:** Use a combination! Folders for structure, tags for flexible categorization.
+</Info>
+
+## Backup Strategy
+
+<Warning>
+  **Important:** Your vault contains important information. Always keep backups!
+</Warning>
+
+### Option 1: Cloud Sync (Easiest)
+
+<CardGroup cols={3}>
+  <Card title="Obsidian Sync" icon="cloud">
+    Official paid service
+    
+    $10/month, automatic, encrypted
+  </Card>
+  <Card title="iCloud / OneDrive" icon="cloud-arrow-up">
+    Free option
+    
+    Put vault in synced folder
+  </Card>
+  <Card title="Dropbox / Google Drive" icon="folder">
+    Free option
+    
+    Works but may have conflicts
+  </Card>
+</CardGroup>
+
+### Option 2: Git (Advanced)
+
+For tech-savvy users, use Git for version control:
+
+```bash
+cd /path/to/vault
+git init
+git add .
+git commit -m "Initial commit"
+```
+
+<Tip>
+  The **Obsidian Git** plugin automates this process. Great for programmers!
+</Tip>
+
+### Option 3: Manual Backup
+
+Simply copy your vault folder regularly:
+
+<Steps>
+  <Step title="Find Vault Location">
+    Settings → About → Show vault folder
+  </Step>
+  <Step title="Copy Folder">
+    Copy entire vault folder to external drive or cloud storage
+  </Step>
+  <Step title="Schedule Regular Backups">
+    Set a calendar reminder for weekly/monthly backups
+  </Step>
+</Steps>
+
+## Multiple Vaults
+
+You can create multiple vaults for different purposes:
+
+<AccordionGroup>
+  <Accordion title="When to use multiple vaults">
+    - Separate work and personal
+    - Different privacy levels
+    - Distinct projects that shouldn't mix
+    - Testing plugins without affecting main vault
+  </Accordion>
+  <Accordion title="How to switch vaults">
+    1. Click vault name in bottom left
+    2. Select "Open another vault"
+    3. Choose from existing or create new
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<Steps>
+  <Step title="Install Plugins">
+    Enhance your vault with powerful community plugins
+    
+    [Go to Plugins Guide →](/obsidian-guide/plugins)
+  </Step>
+  <Step title="Learn Civic Research">
+    Apply these skills to real-world research
+    
+    [Go to Civic Research Guide →](/obsidian-guide/civic-research)
+  </Step>
+</Steps>
+
+## Quick Reference
+
+<Card title="Keyboard Shortcuts" icon="keyboard">
+  - `Cmd/Ctrl + N`: New note
+  - `Cmd/Ctrl + O`: Quick switcher (find notes)
+  - `Cmd/Ctrl + P`: Command palette
+  - `Cmd/Ctrl + ,`: Settings
+  - `Cmd/Ctrl + E`: Toggle edit/preview
+</Card>
+

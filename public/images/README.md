@@ -1,4 +1,4 @@
-# Images Needed for Autonate AI Site
+# Images Needed for AutoNateAI Site
 
 This directory needs the following images to complete the site design:
 

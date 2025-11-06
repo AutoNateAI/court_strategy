@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Autonate AI",
+  "name": "AutoNateAI",
   "logo": {
     "dark": "/public/images/logo-dark.svg",
     "light": "/public/images/logo-light.svg"
@@ -48,12 +48,6 @@
     }
   ],
   "navigation": [
-    {
-      "group": "Getting Started",
-      "pages": [
-        "home"
-      ]
-    },
     {
       "group": "Workshops",
       "pages": [

@@ -1,4 +1,4 @@
-# Autonate AI Documentation Site
+# AutoNateAI Documentation Site
 
 AI-powered tools and workshops for families, researchers, and communities using Obsidian and Cursor.
 
